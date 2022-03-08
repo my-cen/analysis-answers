@@ -204,12 +204,11 @@
 	
 	\subsection*{Exercise 3.4.6}
 	
-	By Axiom 3.11, $\{0, 1\}^X$ exists. We can use Axiom 3.7 (the axiom of replacement) to create a set \[Y = \{Z: Z = f^{-1}(\{1\}) \text{ for some } f \in \{0, 1\}^X\}.\] Every $S$ which is a subset of $X$ is in $Y$, because defining $f(x)$ to be $1$ when $x$ is in $S$ and to be $0$ otherwise means that $f^{-1}(\{1\}) = S$. Every element of $Y$ is a subset of $X$, because every element of $f^{-1}(\{1\})$ has to be in $X$.
+	By Axiom 3.11, $\{0, 1\}^X$ exists. We can use Axiom 3.7 (the axiom of replacement) to create a set \[Y = \{f^{-1}(\{1\}): f \in \{0, 1\}^X\}.\] Every $S$ which is a subset of $X$ is in $Y$, because defining $f(x)$ to be $1$ when $x$ is in $S$ and to be $0$ otherwise means that $f^{-1}(\{1\}) = S$. Every element of $Y$ is a subset of $X$, because every element of $f^{-1}(\{1\})$ has to be in $X$.
 	
 	\subsection*{Exercise 3.4.7}
 	
-	By Lemma 3.4.10, there exists $X'' = \{X': X' \text{ is a subset of } X\}$ and $Y'' = \{Y': Y' \text{ is a subset of } Y\}$.
-	
+	By Lemma 3.4.10, there exists $Y'' = \{Y': Y' \text{ is a subset of } Y\}$. By Axiom 3.7 (the axiom of replacement), there exists a set \[Z = \{{Y^\prime}^X: Y' \in Y''\}.\] We can use it again to get, where $f|_{X'}$ denotes, if $X' \subseteq X$, the function from $X'$ to $Y$ where for any $x \in X'$, $f|_{X'}(x) \coloneqq f(x)$: \[Z' = \]
 	\subsection*{Exercise 3.4.9}
 	
 	
