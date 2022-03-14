@@ -216,13 +216,17 @@
 	
 	\subsection*{Exercise 3.5.1}
 	
-	First, we will show that $(x, y) = (x', y')$ implies that both $x = x'$ and $y = y'$. Since $(x, y) \coloneqq \{\{x\}, \{x, y\}\}$, we have to show that $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$ implies that both $x = x'$ and $y = y'$. If $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$, then $\{x\} \in \{\{x'\}, \{x', y'\}\}$. In order for this to be true, we must have $\{x\} = \{x'\}$, which implies $x = x'$, or $\{x\} = \{x', y'\}$, which implies $x' = y' = x$. But the latter case implies the former case, so we can ignore the latter one. Doing the same with $\{x, y\}$, $\{x'\}$, and $\{x', y'\}$ yields that $x = x'$ and $y = y'$.
+	First, we will show that $(x, y) = (x', y')$ implies that both $x = x'$ and $y = y'$. Since $(x, y) \coloneqq \{\{x\}, \{x, y\}\}$, we have to show that $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$ implies that both $x = x'$ and $y = y'$. If $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$, then $\{x\} \in \{\{x'\}, \{x', y'\}\}$. In order for this to be true, we must have $\{x\} = \{x'\}$, which implies $x = x'$, or $\{x\} = \{x', y'\}$, which implies $x' = y' = x$. But the latter case implies the former case, so we can ignore the latter one. Doing the same with $\{x, y\}$, $\{x'\}$, and $\{x', y'\}$ yields that $x = x'$ and $y = y'$. The converse is true by Axiom 3.2.
 	
-	The converse is true by Axiom 3.2.
+	We can show that $X \times Y$ is a set if $X$ and $Y$ are both sets using Axiom 3.1 (sets are objects), Axiom 3.7 (axiom of replacement), and Axiom 3.12 (axiom of union). By Axioms 3.1 and 3.7, we can create the set $Z = \{\{(x, y)\}: y \in Y\}: x \in X\}$. By Axiom 3.12, we can also create the set $\bigcup Z$, which we can define to be $X \times Y$.
 	
 	I won't do the additional challenge.
 	
 	\subsection*{Exercise 3.5.6}
+	
+	We will show that if $A \times B \subseteq C \times D$ and $A, B, C, D \ne \emptyset$, then $A \subseteq C$ and $B \subseteq D$. Since $A$ and $B$ are nonempty, by the single choice lemma (Lemma 3.1.5), there exist some $a \in A$ and $b \in B$. Now, for any $x \in A$, since $(x, b) \in A \times B \subseteq C \times D$, we have $x \in C$. Similarly, for any $y \in B$, since $(a, y) \in A \times B \subseteq C \times D$, we have $y \in D$. Therefore, $A \subseteq C$ and $B \subseteq D$.
+	
+	However, we can show that if we remove the assumption that $A$, $B$, $C$, and $D$ are nonempty, then this statement is false. If $A = \{0\}$, $C = \{1\}$, and $B = D = \emptyset$, then $A \times B$ is empty, as there are no elements of $B$. Similarly, $C \times D = \emptyset$, and therefore $A \times B \subseteq C \times D$. However, $A \not \subseteq C$.
 	
 	
 	
