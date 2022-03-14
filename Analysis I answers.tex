@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\newcommand{\increment}{\! + \! +}
 \begin{document}
 	\part*{Chapter 1}
 	
@@ -24,11 +25,11 @@
 	
 	We shall use induction on $a$, fixing $b$ and $c$. First, we shall prove the base case. If $a = 0$, $a + b = 0 + b = b$ by the definition of addition of natural numbers  (Definition 2.2.1). Therefore, $(a + b) + c = b + c$. Also by Definition 2.2.1, $a + (b + c) = 0 + (b + c) = b + c$. We now have $(a + b) + c = b + c = a + (b + c)$.
 	
-	Now suppose that $(a + b) + c = a + (b + c)$. We then have, by Definition 2.2.1, that $((a\! + \! +) + b) + c = ((a + b)\! + \! +) + c = ((a + b) + c)\! + \! + = (a + (b + c))\! + \! +$. Because of Definition 2.2.1 again, $(a + (b + c))\! + \! + = (a\! + \! +) + (b + c)$. Now we have $((a\! + \! +) + b) + c = (a\! + \! +) + (b + c)$, which closes the induction.
+	Now suppose that $(a + b) + c = a + (b + c)$. We then have, by Definition 2.2.1, that $((a\increment) + b) + c = ((a + b)\increment) + c = ((a + b) + c)\increment = (a + (b + c))\increment$. Because of Definition 2.2.1 again, $(a + (b + c))\increment = (a\increment) + (b + c)$. Now we have $((a\increment) + b) + c = (a\increment) + (b + c)$, which closes the induction.
 	
 	\subsection*{Exercise 2.2.2}
 	
-	We shall use induction on $a$. The base case is vacuously true since $0$ is not positive. For the inductive step, we have to show that $a \! + \! +$ being positive implies that $a\! + \! + = b\! + \! +$ for exactly one natural number $b$ if $a$ being positive implies that $a = c\! + \! +$ for exactly one natural number $c$. But $a$ is equal to $b$ if $a \! + \! +$ is equal to $b \! + \! +$, by Axiom 2.4. This closes the induction.
+	We shall use induction on $a$. The base case is vacuously true since $0$ is not positive. For the inductive step, we have to show that $a \increment$ being positive implies that $a\increment = b\increment$ for exactly one natural number $b$ if $a$ being positive implies that $a = c\increment$ for exactly one natural number $c$. But $a$ is equal to $b$ if $a \increment$ is equal to $b \increment$, by Axiom 2.4. This closes the induction.
 	
 	\subsection*{Exercise 2.2.3}
 	
@@ -41,25 +42,25 @@
 	(f) If $a < b$, $b = a + c$ for some $c$, and $b \ne a$. Therefore, $c$ is positive, because otherwise $b = a + 0 = a$. ($a + 0 = a$ because of Lemma 2.2.2.)
 	
 	Conversely, if $b = a + c$ for some positive number $c$, we know that $a \le b$. If $a = b$, $a = a + c$. By Lemma 2.2.2, $a = a + 0$, so $a + 0 = a + c$. We can use Proposition 2.2.6 to get $0 = c$, but $c$ is positive. Therefore, $a \ne b$, and combined with $a \le b$, we get $a < b$. \\
-	(e) We first prove that $a < b$ implies that $a \! + \! + \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \! + \! + = c$. Therefore, $b = a + d \! + \! +$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \! + \! + = (a + d) \! + \! + = (a \! + \! +) + d$. Therefore, $a \! + \! + \le b$.
+	(e) We first prove that $a < b$ implies that $a \increment \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \increment = c$. Therefore, $b = a + d \increment$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \increment = (a + d) \increment = (a \increment) + d$. Therefore, $a \increment \le b$.
 	
-	Conversely, if $a \! + \! + \le b$, we need to prove that $a < b$. Since $a \! + \! + = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \! + \! + \le a$, and we get, from (c), that $a \! + \! + = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
+	Conversely, if $a \increment \le b$, we need to prove that $a < b$. Since $a \increment = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \increment \le a$, and we get, from (c), that $a \increment = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
 	
 	\subsection*{Exercise 2.2.6 (unfinished)}
 	
 	We use induction on $n$. When $n = 0$, $m \le n$ implies that $0 = m + a$. But by Corollary 2.2.9, $m = 0 = n$, so $P(n)$ being true implies that $P(m)$ is true.
 	
-	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \! + \! +$ and $P(n \! + \! +)$ together imply $P(b)$. Since $b \le n \! + \! +$, $n \! + \! + = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \! + \! + = b + d \! + \! +$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \! + \! +$ implies that $b \le n$ or $n \! + \! + = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \! + \! + = (n + 0) \! + \! + = n + 0 \! + \! + = n + 1$. Since $P(n \! + \! +)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
+	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $b \le n \increment$, $n \increment = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \increment = b + d \increment$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \increment$ implies that $b \le n$ or $n \increment = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \increment = (n + 0) \increment = n + 0 \increment = n + 1$. Since $P(n \increment)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
 	
 	\section*{Section 2.3}
 	
 	\subsection*{Exercise 2.3.1}
 	
-	First, we prove that $n \cdot 0 = 0$. We induct on $n$. When $n = 0$, $n \cdot 0 = 0 \cdot 0 = 0$, because of Definition 2.3.1. For the inductive hypothesis, we assume $n \cdot 0 = 0$. Then we need to prove that $n \! + \! + \cdot 0 = 0$. By Definition 2.3.1, $n \! + \! + \cdot 0 = n \cdot 0 + 0 = n \cdot 0$. But we already know that $n \cdot 0 = 0$, so $n \! + \! + \cdot 0 = 0$. This closes the induction.
+	First, we prove that $n \cdot 0 = 0$. We induct on $n$. When $n = 0$, $n \cdot 0 = 0 \cdot 0 = 0$, because of Definition 2.3.1. For the inductive hypothesis, we assume $n \cdot 0 = 0$. Then we need to prove that $n \increment \cdot 0 = 0$. By Definition 2.3.1, $n \increment \cdot 0 = n \cdot 0 + 0 = n \cdot 0$. But we already know that $n \cdot 0 = 0$, so $n \increment \cdot 0 = 0$. This closes the induction.
 	
-	Next, we prove that $n \cdot m \! + \! + = nm + n$ using induction on $n$. When $n = 0$, $0 \cdot m \! + \! + = 0 = 0 \cdot m + 0$. Now, if $n \cdot m \! + \! + = nm + n$, we need to prove that $n \! + \! + \cdot m \! + \! + = n \! + \! + \cdot m + n \! + \! +$. We can deduce from $n \cdot m \! + \! + = nm + n$ that $n \! + \! + \cdot m \! + \! + = (n \cdot m \! + \! +) + m \! + \! + = nm + n + m \! + \! + = nm + (n + m) \! + \! + = nm + n \! + \! + \, + m = (n \! + \! +) \cdot m + n \! + \! +$. This closes the induction.
+	Next, we prove that $n \cdot m \increment = nm + n$ using induction on $n$. When $n = 0$, $0 \cdot m \increment = 0 = 0 \cdot m + 0$. Now, if $n \cdot m \increment = nm + n$, we need to prove that $n \increment \cdot m \increment = n \increment \cdot m + n \increment$. We can deduce from $n \cdot m \increment = nm + n$ that $n \increment \cdot m \increment = (n \cdot m \increment) + m \increment = nm + n + m \increment = nm + (n + m) \increment = nm + n \increment \, + m = (n \increment) \cdot m + n \increment$. This closes the induction.
 	
-	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \! + \! + = m \! + \! + \cdot n$. We know that $n \cdot m \! + \! + = nm + n$ and $m \! + \! + \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \! + \! + = m \! + \! + \cdot n$. This closes the induction.
+	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \increment = m \increment \cdot n$. We know that $n \cdot m \increment = nm + n$ and $m \increment \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \increment = m \increment \cdot n$. This closes the induction.
 	\subsection*{Exercise 2.3.4}
 	By Proposition 3.4, $(a + b)^2 = (a + b)  \cdot (a + b) = (a + b) \cdot a + (a + b) \cdot b = a \cdot a + b \cdot a + a \cdot b + b \cdot b$. We can rewrite $b \cdot a + a \cdot b$ as $a \cdot b + a \cdot b$ because of Lemma 2.3.2. We can further rewrite this as $2ab$ because $2(ab) = 1(ab) + ab = 0(ab) + ab + ab = 0 + ab + ab = ab + ab$. We can also rewrite $a \cdot a$ and $b \cdot b$ as $a^2$ and $b^2$ respectively. Therefore, $(a + b)^2 = a^2 + 2ab + b^2$.
 	\part*{Chapter 3}
@@ -228,15 +229,13 @@
 	
 	However, we can show that if we remove the assumption that $A$, $B$, $C$, and $D$ are nonempty, then this statement is false. If $A = \{0\}$, $C = \{1\}$, and $B = D = \emptyset$, then $A \times B$ is empty, as there are no elements of $B$. Similarly, $C \times D = \emptyset$, and therefore $A \times B \subseteq C \times D$. However, $A \not \subseteq C$.
 	
+	If $A \subseteq C$ and $B \subseteq D$, all ordered pairs $(a, b)$ where $a \in A$ and $b \in B$ are in $C \times D$ because $a \in C$ and $b \in D$. Hence, $A \times B \subseteq C \times D$. This statement holds even when $A$, $B$, $C$, and $D$ are not all nonempty.
 	
+	Assuming that $A \times B = C \times D$ and $A, B, C, D \ne \emptyset$, $A = C$ and $B = D$. This is because $A \times B \subseteq C \times D$ and $C \times D \supseteq A \times B$, and therefore $A \subseteq C$, $A \supseteq C$, $B \subseteq D$, and $B \supseteq D$.
 	
-	\subsection*{Exercise 3.5.10}
+	If we remove the assumption that $A, B, C, D \ne \emptyset$, the statement is false. The counterexample from before ($A = \{0\}$, $C = \{1\}$, $B = D = \emptyset$) also works here. We have that $A \times B = C \times D = \emptyset$, but $A \ne C$.
 	
-	
-	
-	\subsection*{Exercise 3.5.11}
-	
-	
+	We have that $A = C$ and $B = D$ imply that $A \times B = C \times D$ because $A \subseteq C$ and $B \subseteq D$ imply, together, that $A \times B \subseteq C \times D$ and the same with $\subseteq$ replaced by $\supseteq$.
 	
 	\subsection*{Exercise 3.5.13}
 	
