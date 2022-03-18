@@ -63,6 +63,7 @@
 	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \increment = m \increment \cdot n$. We know that $n \cdot m \increment = nm + n$ and $m \increment \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \increment = m \increment \cdot n$. This closes the induction.
 	\subsection*{Exercise 2.3.4}
 	By Proposition 3.4, $(a + b)^2 = (a + b)  \cdot (a + b) = (a + b) \cdot a + (a + b) \cdot b = a \cdot a + b \cdot a + a \cdot b + b \cdot b$. We can rewrite $b \cdot a + a \cdot b$ as $a \cdot b + a \cdot b$ because of Lemma 2.3.2. We can further rewrite this as $2ab$ because $2(ab) = 1(ab) + ab = 0(ab) + ab + ab = 0 + ab + ab = ab + ab$. We can also rewrite $a \cdot a$ and $b \cdot b$ as $a^2$ and $b^2$ respectively. Therefore, $(a + b)^2 = a^2 + 2ab + b^2$.
+	
 	\part*{Chapter 3}
 	
 	\section*{Section 3.1}
@@ -237,9 +238,9 @@
 	
 	We have that $A = C$ and $B = D$ imply that $A \times B = C \times D$ because $A \subseteq C$ and $B \subseteq D$ imply, together, that $A \times B \subseteq C \times D$ and the same with $\subseteq$ replaced by $\supseteq$.
 	
-	\subsection*{Exercise 3.5.13 (not done yet)}
+	\subsection*{Exercise 3.5.13 (unfinished)}
 	
-	
+	Not yet done
 	
 	\section*{Section 3.6}
 	
@@ -247,6 +248,13 @@
 	
 	If $X$ has cardinality $0$, there exists a bijection $f \colon X \rightarrow \{i \in \mathbf{N}: 1 \le i \le 0\}$. The set $\{i \in \mathbf{N}: 1 \le i \le 0\}$ is obviously empty. If $X \ne \emptyset$, then there exists some $x \in X$. But then $f(x)$ is in $\emptyset$, and therefore $X$ must be empty.
 	
-	If $X$ is empty, the empty function $f \colon \emptyset \rightarrow \emptyset$ is a bijection (injectivity is because there are no two elements in the domain at all, and surjectivity is from that the range is empty)
+	If $X$ is empty, the function $f \colon X \rightarrow \emptyset$ exists (we don't need to give how to derive $f(x)$ given $x$, since $x \in X$ is impossible) and is a bijection (injectivity is because there are no elements in the domain at all, and surjectivity is from that the range is empty). Since $\emptyset = \{i \in \mathbf{N}: 1 \le i \le 0\}$, $X$ has cardinality $0$.
+	
+	\subsection*{Exercise 3.6.3}
+	
+	We will induct on $n$. When $n = 0$, $\{i \in N: 1 \le i \le n\}$ is empty, so we can make $M$ equal to any natural number, say, $0$. Now, assuming that all $f \colon \{i \in N: 1 \le i \le n\} \rightarrow \mathbf{N}$ satisfy the property that there exists some natural number $M$ such that $f(i) \le M$ for all $1 \le i \le n$, we will now show that for every $g \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$, there exists some natural number $a$ such that $g(i) \le a$ for all $1 \le i \le n \increment$. If $h \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$ is defined so that $h(x) \coloneqq g(x)$ for all $x \in \{i \in N: 1 \le i \le n \increment\}$, there exists some $b$ such that $h(i) \le b$ for all $1 \le i \le n$. Defining $a \coloneqq \begin{cases}
+		b & \text{if } g(n \increment) \le b \\
+		g(n \increment) & \text{if } g(n \increment) > b
+	\end{cases}$ ensures that $a$ will always be greater than or equal to all elements of $g(\{i \in N: 1 \le i \le n \increment\})$, since when $g(n \increment) \le b$, any element of $g(\{i \in N: 1 \le i \le n \increment\})$ is either $g(n \increment)$, which we know to be less or equal to $b$.
 	
 \end{document}
