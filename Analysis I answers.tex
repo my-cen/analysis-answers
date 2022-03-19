@@ -255,6 +255,20 @@
 	We will induct on $n$. When $n = 0$, $\{i \in N: 1 \le i \le n\}$ is empty, so we can make $M$ equal to any natural number, say, $0$. Now, assuming that all $f \colon \{i \in N: 1 \le i \le n\} \rightarrow \mathbf{N}$ satisfy the property that there exists some natural number $M$ such that $f(i) \le M$ for all $1 \le i \le n$, we will now show that for every $g \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$, there exists some natural number $a$ such that $g(i) \le a$ for all $1 \le i \le n \increment$. If $h \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$ is defined so that $h(x) \coloneqq g(x)$ for all $x \in \{i \in N: 1 \le i \le n \increment\}$, there exists some $b$ such that $h(i) \le b$ for all $1 \le i \le n$. Defining $a \coloneqq \begin{cases}
 		b & \text{if } g(n \increment) \le b \\
 		g(n \increment) & \text{if } g(n \increment) > b
-	\end{cases}$ ensures that $a$ will always be greater than or equal to all elements of $g(\{i \in N: 1 \le i \le n \increment\})$, since when $g(n \increment) \le b$, any element of $g(\{i \in N: 1 \le i \le n \increment\})$ is either $g(n \increment)$, which we know to be less or equal to $b$.
+	\end{cases}$ ensures that $a$ will always be greater than or equal to all elements of $g(\{i \in N: 1 \le i \le n \increment\})$.
+	
+	\subsection*{Exercise 3.6.5}
+	
+	We will define $f \colon A \times B \rightarrow B \times A$ by $f(a, b) \coloneqq (b, a)$, where $a \in A$ and $b \in B$. Injectivity of $f$ comes from $(b, a) = (d, c)$ implying that $b = d$ and $a = c$, further implying that $(a, b) = (c, d)$. Surjectivity comes from the fact that for every $(b, a) \in B \times A$ has a corresponding ordered pair (namely, $(a, b)$) in $A \times B$ where $f(a, b) = (b, a)$.
+	
+	Now, we will prove that $ab = ba$. We will define $A$ as $\{i \in \mathbf{N}: 1 \le i \le a\}$ and $B$ as $\{j \in \mathbf{N}: 1 \le j \le b\}$. Since $A$ has equal cardinality with itself and the same for $B$ (Proposition 3.6.4), $A$ and $B$ are both finite and have the cardinalities $a$ and $b$, respectively. By Proposition 3.6.14(e), $\#(A) \cdot \#(B) = \#(A \times B)$ and $\#(B) \cdot \#(A) = \#(B \times A)$. We also know that $\#(A \times B) = \#(B \times A)$, and therefore $ab = ba$.
+	
+	\subsection*{Exercise 3.6.7}
+	
+	
+	
+	\subsection*{Exercise 3.6.10}
+	
+	
 	
 \end{document}
