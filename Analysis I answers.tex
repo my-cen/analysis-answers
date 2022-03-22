@@ -301,4 +301,47 @@
 	
 	We know that $-1 = -(1 \formalminus 0) = 0 \formalminus 1$. If $a = a_1 \formalminus a_2$, $(-1) \cdot a = (0 \cdot a_1 + 1 \cdot a_2) \formalminus (0 \cdot a_2 + 1 \cdot a_1) = a_2 \formalminus a_1 = -a$.
 	
+	\subsection*{Exercise 4.1.4 (partially done)}
+	
+	I will write $x = a \formalminus b$, $y = c \formalminus d$, and $z = e \formalminus f$, where $a, b, c, d, e, f \in \mathbf{N}$.
+	
+	First, we will prove $x + y = y + x$:
+	\begin{align*}
+		x + y &= (a \formalminus b) + (c \formalminus d) \\
+		&= (a + c) \formalminus (b + d) \\
+		y + x &= (c \formalminus d) + (a \formalminus b) \\
+		&= (c + a) \formalminus (d + b)
+	\end{align*}
+	and therefore, because of natural number addition's commutativity, $x + y = y + x$.
+	
+	Next, we will prove that $(x + y) + z = x + (y + z)$:
+	\begin{align*}
+		(x + y) + z &= ((a \formalminus b) + (c \formalminus d)) + (e \formalminus f) \\
+		&= ((a + c) \formalminus (b + d)) + (e \formalminus f) \\
+		&= ((a + c) + e) \formalminus ((b + d) + f) \\
+		x + (y + z) &= (a \formalminus b) + ((c \formalminus d) + (e \formalminus f)) \\
+		&= (a \formalminus b) + ((c + e) \formalminus (d + f)) \\
+		&= (a + (c + e)) \formalminus (b + (d + f))
+	\end{align*}
+	and therefore, because of natural number addition's associativity, $(x + y) + z = x + (y + z)$.
+	
+	Now, we will prove that $x + 0 = 0 + x = x$. We have proved above that $x + y = y + x$ and therefore $x + 0 = 0 + x$, so we only need to show $x + 0 = x$:
+	\begin{align*}
+		x + 0 &= (a \formalminus b) + (0 \formalminus 0) \\
+		&= (a + 0) \formalminus (b + 0).
+	\end{align*}
+	We know that $a + 0 = a$ and $b + 0 = b$, so $x + 0 = x$, and hence $x + 0 = 0 + x = x$.
+	
+	Next, we will prove that $x + (-x) = (-x) + x = 0$. We have already proved that $x + y = y + x$ and therefore $x + (-x) = (-x) + x$, so the only thing left is to show $x + (-x) = 0$.
+	\begin{align*}
+		x + (-x) &= (a \formalminus b) + (b \formalminus a) \\
+		&= (a + b) \formalminus (b + a) \\
+		&= (a + b) \formalminus (a + b) \\
+		&= 0 \formalminus 0 \\
+		&= 0.
+	\end{align*}
+	Therefore, $x + (-x) = (-x) + x = 0$.
+	
+	(I will prove the rest of the identities later.)
+	
 \end{document}
