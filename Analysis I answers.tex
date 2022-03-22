@@ -1,30 +1,33 @@
+% This document must be compiled twice for it to display properly.
 \documentclass[12pt, oneside]{book}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \newcommand{\increment}{\! + \! +}
+\newcommand{\formalminus}{\, \text{\textemdash} \,}
 \begin{document}
 	\title{Answers to Analysis I Exercises, Third Edition}
 	\author{my-cen}
 	\date{March 21, 2022}
 	\maketitle
+	\tableofcontents
 	
-	\chapter*{Chapter 1}
+	\chapter{Introduction}
 	
-	\section*{Section 1.1}
-	
-	N/A
-	
-	\section*{Section 1.2}
+	\section{What is analysis?}
 	
 	N/A
 	
-	\chapter*{Chapter 2}
-	
-	\section*{Section 2.1}
+	\section{Why do analysis?}
 	
 	N/A
 	
-	\section*{Section 2.2}
+	\chapter{Starting at the beginning: the natural numbers}
+	
+	\section{The Peano axioms}
+	
+	N/A
+	
+	\section{Addition}
 	
 	\subsection*{Exercise 2.2.1}
 	
@@ -57,7 +60,7 @@
 	
 	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $b \le n \increment$, $n \increment = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \increment = b + d \increment$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \increment$ implies that $b \le n$ or $n \increment = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \increment = (n + 0) \increment = n + 0 \increment = n + 1$. Since $P(n \increment)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
 	
-	\section*{Section 2.3}
+	\section{Multiplication}
 	
 	\subsection*{Exercise 2.3.1}
 	
@@ -66,12 +69,14 @@
 	Next, we prove that $n \cdot m \increment = nm + n$ using induction on $n$. When $n = 0$, $0 \cdot m \increment = 0 = 0 \cdot m + 0$. Now, if $n \cdot m \increment = nm + n$, we need to prove that $n \increment \cdot m \increment = n \increment \cdot m + n \increment$. We can deduce from $n \cdot m \increment = nm + n$ that $n \increment \cdot m \increment = (n \cdot m \increment) + m \increment = nm + n + m \increment = nm + (n + m) \increment = nm + n \increment \, + m = (n \increment) \cdot m + n \increment$. This closes the induction.
 	
 	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \increment = m \increment \cdot n$. We know that $n \cdot m \increment = nm + n$ and $m \increment \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \increment = m \increment \cdot n$. This closes the induction.
+	
 	\subsection*{Exercise 2.3.4}
+	
 	By Proposition 3.4, $(a + b)^2 = (a + b)  \cdot (a + b) = (a + b) \cdot a + (a + b) \cdot b = a \cdot a + b \cdot a + a \cdot b + b \cdot b$. We can rewrite $b \cdot a + a \cdot b$ as $a \cdot b + a \cdot b$ because of Lemma 2.3.2. We can further rewrite this as $2ab$ because $2(ab) = 1(ab) + ab = 0(ab) + ab + ab = 0 + ab + ab = ab + ab$. We can also rewrite $a \cdot a$ and $b \cdot b$ as $a^2$ and $b^2$ respectively. Therefore, $(a + b)^2 = a^2 + 2ab + b^2$.
 	
-	\chapter*{Chapter 3}
+	\chapter{Set theory}
 	
-	\section*{Section 3.1}
+	\section{Fundamentals}
 	
 	\subsection*{Exercise 3.3.1}
 	
@@ -117,7 +122,7 @@
 	
 	If $Q(x, y)$ is the statement that $x = y$ and $P(x)$ are both true, then by Axiom 3.7 and the fact that for each $x$ there exists at most one $y$ such that $Q(x, y)$, there exists a set $B = \{y: x = y \text{ and } P(x) \text{ for some } x \in A\}$. For any $z \in B$, we know that $z \in A$ and that $P(z)$ is true. For any $x \in A$ such that $P(x)$ is true, we similarly know that $z \in B$. Therefore, $A = B$.
 	
-	\section*{Section 3.2}
+	\section{Russell's paradox (Optional)}
 	
 	\subsection*{Exercise 3.2.1}
 	
@@ -145,7 +150,7 @@
 	
 	If $P(x)$ is the property that $x$ is a natural number, then $\mathbf{N} = \{x: P(x) \text{ is true}\}$ exists, by Axiom 3.9.
 	
-	\section*{Section 3.3}
+	\section*{Functions}
 	
 	\subsection*{Exercise 3.3.2}
 	
@@ -195,7 +200,7 @@
 	
 	By Exercise 3.3.2, $g \circ f$ is both injective and surjective, and is therefore bijective. The only thing left we have to prove is that $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = x$. But $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = (f^{-1} \circ f)(x) = x$, and we have proved what we want.
 	
-	\section*{Section 3.4}
+	\section*{Images and inverse images}
 	
 	\subsection*{Challenge to define $f(S)$ using the axiom of specification}
 	
@@ -219,7 +224,7 @@
 	
 	We can do something similar for $A_{\beta'}$. Therefore, \[\{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\} = \{x \in A_{\beta'}: x \in A_\alpha \text{ for all } \alpha \in I\}.\]
 	
-	\section*{Section 3.5}
+	\section{Cartesian products}
 	
 	\subsection*{Exercise 3.5.1}
 	
@@ -247,7 +252,7 @@
 	
 	?
 	
-	\section*{Section 3.6}
+	\section{Cardinality of sets}
 	
 	\subsection*{Exercise 3.6.2}
 	
@@ -277,5 +282,19 @@
 	\paragraph*{Attempt 1}
 	
 	We induct on $n$. (\emph{I don't think we can induct, actually, since} $\#(\bigcup_{i \in \{1, \dotsc, n + 1\}} A_i) > n + 1$ \emph{does not necessarily imply} $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) > n$). When $n = 0$, $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) = \#(\emptyset) = 0$. It is obvious that $0 \not > 0$, so the pigeonhole principle holds vacuously when $n = 0$. When the pigeonhole principle is true for $n$ finite sets, now we will show that it also is true for $A_1, \dotsc, A_{n \increment}$. By Proposition 3.6.14(b), \[\#(\bigcup_{i \in \{1, \dotsc, n \increment\}} A_i) \le \#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) + \#(A_{n \increment}).\]
+	
+	\chapter{Integers and rationals}
+	
+	\section{The integers}
+	
+	\subsection*{Exercise 4.1.1}
+	
+	\paragraph*{Reflexive}
+	
+	If $a, b \in \mathbf{N}$, $a + b = b + a$, so by Definition 4.1.1, $a \formalminus b = a \formalminus b$.
+	
+	\paragraph*{Symmetric}
+	
+	If $a \formalminus b = c \formalminus d$, $a + d = c + b$. Now, since $c + b = a + d$, $c \formalminus d = a \formalminus b$.
 	
 \end{document}
