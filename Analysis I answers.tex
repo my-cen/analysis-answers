@@ -1,30 +1,33 @@
+% This document must be compiled twice for it to display properly.
 \documentclass[12pt, oneside]{book}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \newcommand{\increment}{\! + \! +}
+\newcommand{\formalminus}{\, \text{\textemdash} \,}
 \begin{document}
 	\title{Answers to Analysis I Exercises, Third Edition}
 	\author{my-cen}
 	\date{March 21, 2022}
 	\maketitle
+	\tableofcontents
 	
-	\chapter*{Chapter 1}
+	\chapter{Introduction}
 	
-	\section*{Section 1.1}
-	
-	N/A
-	
-	\section*{Section 1.2}
+	\section{What is analysis?}
 	
 	N/A
 	
-	\chapter*{Chapter 2}
-	
-	\section*{Section 2.1}
+	\section{Why do analysis?}
 	
 	N/A
 	
-	\section*{Section 2.2}
+	\chapter{Starting at the beginning: the natural numbers}
+	
+	\section{The Peano axioms}
+	
+	N/A
+	
+	\section{Addition}
 	
 	\subsection*{Exercise 2.2.1}
 	
@@ -38,16 +41,26 @@
 	
 	\subsection*{Exercise 2.2.3}
 	
-	(a) By Lemma 2.2.2, $a = a + 0$, so $a \ge a$. \\
-	(b) Because $a \ge b$ and $b \ge c$, $a = b + n$ and $b = c + m$ for some $n$ and $m$. Therefore, $a = b + n = (c + m) + n$. By Proposition 2.2.5, $(c + m) + n = c + (m + n)$, so $a = c + (m + n)$. $n + m$ is a natural number, so $a \ge c$. \\
-	(c) Because $a \ge b$ and $b \ge a$, $a = b + n$ and $b = a + m$. Therefore, $a = b + n = (a + m) + n$. By Proposition 2.2.5, $(a + m) + n = a + (m + n)$. Now we have $a = a + (m + n)$. By Lemma 2.2.2, $a = a + 0$, so we can use Proposition 2.2.6 to get $0 = m + n$. Using Corollary 2.2.9, we can deduce that $n$ and $m$ are both equal to $0$. Therefore, $a = b$. \\
-	(d) If $a \ge b$, $a = b + d$ for some $d$. Because of this, $a + c = (b + d) + c$. By Propositions 2.2.4 and 2.2.5, $(b + d) + c = b + (d + c) = b + (c + d) = (b + c) + d$. Therefore, $a + c \ge b + c$.
+	\noindent (a) By Lemma 2.2.2, $a = a + 0$, so $a \ge a$.
 	
-	Conversely, if $a + c \ge b + c$, $a + c = (b + c) + d$ for some $d$. By Propositions 2.2.4 and 2.2.5, $(b + c) + d = b + (c + d) + b + (d + c) = (b + d) + c$. Using Proposition 2.2.6, we get $a = b + d$, and therefore, $a \ge b$. \\
-	(f) If $a < b$, $b = a + c$ for some $c$, and $b \ne a$. Therefore, $c$ is positive, because otherwise $b = a + 0 = a$. ($a + 0 = a$ because of Lemma 2.2.2.)
+	\medskip
+	\noindent (b) Because $a \ge b$ and $b \ge c$, $a = b + n$ and $b = c + m$ for some $n$ and $m$. Therefore, $a = b + n = (c + m) + n$. By Proposition 2.2.5, $(c + m) + n = c + (m + n)$, so $a = c + (m + n)$. $n + m$ is a natural number, so $a \ge c$.
 	
-	Conversely, if $b = a + c$ for some positive number $c$, we know that $a \le b$. If $a = b$, $a = a + c$. By Lemma 2.2.2, $a = a + 0$, so $a + 0 = a + c$. We can use Proposition 2.2.6 to get $0 = c$, but $c$ is positive. Therefore, $a \ne b$, and combined with $a \le b$, we get $a < b$. \\
-	(e) We first prove that $a < b$ implies that $a \increment \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \increment = c$. Therefore, $b = a + d \increment$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \increment = (a + d) \increment = (a \increment) + d$. Therefore, $a \increment \le b$.
+	\medskip
+	\noindent (c) Because $a \ge b$ and $b \ge a$, $a = b + n$ and $b = a + m$. Therefore, $a = b + n = (a + m) + n$. By Proposition 2.2.5, $(a + m) + n = a + (m + n)$. Now we have $a = a + (m + n)$. By Lemma 2.2.2, $a = a + 0$, so we can use Proposition 2.2.6 to get $0 = m + n$. Using Corollary 2.2.9, we can deduce that $n$ and $m$ are both equal to $0$. Therefore, $a = b$.
+	
+	\medskip
+	\noindent (d) If $a \ge b$, $a = b + d$ for some $d$. Because of this, $a + c = (b + d) + c$. By Propositions 2.2.4 and 2.2.5, $(b + d) + c = b + (d + c) = b + (c + d) = (b + c) + d$. Therefore, $a + c \ge b + c$.
+	
+	Conversely, if $a + c \ge b + c$, $a + c = (b + c) + d$ for some $d$. By Propositions 2.2.4 and 2.2.5, $(b + c) + d = b + (c + d) + b + (d + c) = (b + d) + c$. Using Proposition 2.2.6, we get $a = b + d$, and therefore, $a \ge b$.
+	
+	\medskip
+	\noindent (f) If $a < b$, $b = a + c$ for some $c$, and $b \ne a$. Therefore, $c$ is positive, because otherwise $b = a + 0 = a$. ($a + 0 = a$ because of Lemma 2.2.2.)
+	
+	Conversely, if $b = a + c$ for some positive number $c$, we know that $a \le b$. If $a = b$, $a = a + c$. By Lemma 2.2.2, $a = a + 0$, so $a + 0 = a + c$. We can use Proposition 2.2.6 to get $0 = c$, but $c$ is positive. Therefore, $a \ne b$, and combined with $a \le b$, we get $a < b$.
+	
+	\medskip
+	\noindent (e) We first prove that $a < b$ implies that $a \increment \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \increment = c$. Therefore, $b = a + d \increment$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \increment = (a + d) \increment = (a \increment) + d$. Therefore, $a \increment \le b$.
 	
 	Conversely, if $a \increment \le b$, we need to prove that $a < b$. Since $a \increment = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \increment \le a$, and we get, from (c), that $a \increment = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
 	
@@ -57,7 +70,7 @@
 	
 	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $b \le n \increment$, $n \increment = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \increment = b + d \increment$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \increment$ implies that $b \le n$ or $n \increment = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \increment = (n + 0) \increment = n + 0 \increment = n + 1$. Since $P(n \increment)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
 	
-	\section*{Section 2.3}
+	\section{Multiplication}
 	
 	\subsection*{Exercise 2.3.1}
 	
@@ -66,12 +79,14 @@
 	Next, we prove that $n \cdot m \increment = nm + n$ using induction on $n$. When $n = 0$, $0 \cdot m \increment = 0 = 0 \cdot m + 0$. Now, if $n \cdot m \increment = nm + n$, we need to prove that $n \increment \cdot m \increment = n \increment \cdot m + n \increment$. We can deduce from $n \cdot m \increment = nm + n$ that $n \increment \cdot m \increment = (n \cdot m \increment) + m \increment = nm + n + m \increment = nm + (n + m) \increment = nm + n \increment \, + m = (n \increment) \cdot m + n \increment$. This closes the induction.
 	
 	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \increment = m \increment \cdot n$. We know that $n \cdot m \increment = nm + n$ and $m \increment \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \increment = m \increment \cdot n$. This closes the induction.
+	
 	\subsection*{Exercise 2.3.4}
+	
 	By Proposition 3.4, $(a + b)^2 = (a + b)  \cdot (a + b) = (a + b) \cdot a + (a + b) \cdot b = a \cdot a + b \cdot a + a \cdot b + b \cdot b$. We can rewrite $b \cdot a + a \cdot b$ as $a \cdot b + a \cdot b$ because of Lemma 2.3.2. We can further rewrite this as $2ab$ because $2(ab) = 1(ab) + ab = 0(ab) + ab + ab = 0 + ab + ab = ab + ab$. We can also rewrite $a \cdot a$ and $b \cdot b$ as $a^2$ and $b^2$ respectively. Therefore, $(a + b)^2 = a^2 + 2ab + b^2$.
 	
-	\chapter*{Chapter 3}
+	\chapter{Set theory}
 	
-	\section*{Section 3.1}
+	\section{Fundamentals}
 	
 	\subsection*{Exercise 3.3.1}
 	
@@ -117,7 +132,7 @@
 	
 	If $Q(x, y)$ is the statement that $x = y$ and $P(x)$ are both true, then by Axiom 3.7 and the fact that for each $x$ there exists at most one $y$ such that $Q(x, y)$, there exists a set $B = \{y: x = y \text{ and } P(x) \text{ for some } x \in A\}$. For any $z \in B$, we know that $z \in A$ and that $P(z)$ is true. For any $x \in A$ such that $P(x)$ is true, we similarly know that $z \in B$. Therefore, $A = B$.
 	
-	\section*{Section 3.2}
+	\section{Russell's paradox (Optional)}
 	
 	\subsection*{Exercise 3.2.1}
 	
@@ -139,13 +154,13 @@
 	
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.7}
 	
-	If $Q(y)$ is the property that there exists some $x$ such that $P(x, y)$ is true, then $\{y: Q(y) \text{ is true}\} = \{y: P(x, y) \text{ is true for some x } \in A\}$ exists.
+	If $Q(y)$ is the property that there exists some $x$ such that $P(x, y)$ is true, then $\{y: Q(y) \text{ is true}\} = \{y: P(x, y) \text{ is true for some } x \in A\}$ exists.
 	
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.8, assuming that all natural numbers are objects}
 	
 	If $P(x)$ is the property that $x$ is a natural number, then $\mathbf{N} = \{x: P(x) \text{ is true}\}$ exists, by Axiom 3.9.
 	
-	\section*{Section 3.3}
+	\section*{Functions}
 	
 	\subsection*{Exercise 3.3.2}
 	
@@ -195,7 +210,7 @@
 	
 	By Exercise 3.3.2, $g \circ f$ is both injective and surjective, and is therefore bijective. The only thing left we have to prove is that $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = x$. But $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = (f^{-1} \circ f)(x) = x$, and we have proved what we want.
 	
-	\section*{Section 3.4}
+	\section*{Images and inverse images}
 	
 	\subsection*{Challenge to define $f(S)$ using the axiom of specification}
 	
@@ -219,7 +234,7 @@
 	
 	We can do something similar for $A_{\beta'}$. Therefore, \[\{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\} = \{x \in A_{\beta'}: x \in A_\alpha \text{ for all } \alpha \in I\}.\]
 	
-	\section*{Section 3.5}
+	\section{Cartesian products}
 	
 	\subsection*{Exercise 3.5.1}
 	
@@ -247,7 +262,7 @@
 	
 	?
 	
-	\section*{Section 3.6}
+	\section{Cardinality of sets}
 	
 	\subsection*{Exercise 3.6.2}
 	
@@ -276,6 +291,73 @@
 	
 	\paragraph*{Attempt 1}
 	
-	We induct on $n$. (\emph{I don't think we can induct, actually, since} $\#(\bigcup_{i \in \{1, \dotsc, n + 1\}} A_i) > n + 1$ \emph{does not necessarily imply} $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) > n$). When $n = 0$, $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) = \#(\emptyset) = 0$. It is obvious that $0 \not > 0$, so the pigeonhole principle holds vacuously when $n = 0$. When the pigeonhole principle is true for $n$ finite sets, now we will show that it also is true for $A_1, \dotsc, A_{n \increment}$. By Proposition 3.6.14(b), \[\#(\bigcup_{i \in \{1, \dotsc, n \increment\}} A_i) \le \#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) + \#(A_{n \increment}).\]
+	We induct on $n$. (\emph{I don't think we can induct, actually, since} $\#(\bigcup_{i \in \{1, \dotsc, n + 1\}} A_i) > n + 1$ \emph{does not necessarily imply} $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) > n$). When $n = 0$, $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) = \#(\emptyset) = 0$. It is obvious that $0 \not > 0$, so the pigeonhole principle holds vacuously when $n = 0$. When the pigeonhole principle is true for $n$ finite sets, now we will show that it also is true for $A_1, \dotsc, A_{n \increment}$. By Proposition 3.6.14(b), \[\#(\smashoperator{\bigcup_{i \in \{1, \dotsc, n \increment\}}} A_i) \le \#(\smashoperator{\bigcup_{i \in \{1, \dotsc, n\}}} A_i) + \#(A_{n \increment}).\]
 	
+	\chapter{Integers and rationals}
+	
+	\section{The integers}
+	
+	\subsection*{Exercise 4.1.1}
+	
+	\paragraph*{Reflexive}
+	
+	If $a, b \in \mathbf{N}$, $a + b = b + a$, so by Definition 4.1.1, $a \formalminus b = a \formalminus b$.
+	
+	\paragraph*{Symmetric}
+	
+	If $a \formalminus b = c \formalminus d$, $a + d = c + b$. Now, since $c + b = a + d$, $c \formalminus d = a \formalminus b$.
+	
+	\subsection*{Exercise 4.1.3}
+	
+	We know that $-1 = -(1 \formalminus 0) = 0 \formalminus 1$. If $a = a_1 \formalminus a_2$, $(-1) \cdot a = (0 \cdot a_1 + 1 \cdot a_2) \formalminus (0 \cdot a_2 + 1 \cdot a_1) = a_2 \formalminus a_1 = -a$.
+	
+	\subsection*{Exercise 4.1.4 (partially done)}
+	
+	I will write $x = a \formalminus b$, $y = c \formalminus d$, and $z = e \formalminus f$, where $a, b, c, d, e, f \in \mathbf{N}$.
+	
+	First, we will prove $x + y = y + x$:
+	\begin{align*}
+		x + y &= (a \formalminus b) + (c \formalminus d) \\
+		&= (a + c) \formalminus (b + d) \\
+		y + x &= (c \formalminus d) + (a \formalminus b) \\
+		&= (c + a) \formalminus (d + b)
+	\end{align*}
+	and therefore, because of natural number addition's commutativity, $x + y = y + x$.
+	
+	Next, we will prove that $(x + y) + z = x + (y + z)$:
+	\begin{align*}
+		(x + y) + z &= ((a \formalminus b) + (c \formalminus d)) + (e \formalminus f) \\
+		&= ((a + c) \formalminus (b + d)) + (e \formalminus f) \\
+		&= ((a + c) + e) \formalminus ((b + d) + f) \\
+		x + (y + z) &= (a \formalminus b) + ((c \formalminus d) + (e \formalminus f)) \\
+		&= (a \formalminus b) + ((c + e) \formalminus (d + f)) \\
+		&= (a + (c + e)) \formalminus (b + (d + f))
+	\end{align*}
+	and therefore, because of natural number addition's associativity, $(x + y) + z = x + (y + z)$.
+	
+	Now, we will prove that $x + 0 = 0 + x = x$. We have proved above that $x + y = y + x$ and therefore $x + 0 = 0 + x$, so we only need to show $x + 0 = x$:
+	\[\begin{split}
+		x + 0 &= (a \formalminus b) + (0 \formalminus 0) \\
+		&= (a + 0) \formalminus (b + 0).
+	\end{split}\]
+	We know that $a + 0 = a$ and $b + 0 = b$, so $x + 0 = x$, and hence $x + 0 = 0 + x = x$.
+	
+	Next, we will prove that $x + (-x) = (-x) + x = 0$. We have already proved that $x + y = y + x$ and therefore $x + (-x) = (-x) + x$, so the only thing left is to show $x + (-x) = 0$.
+	\[\begin{split}
+		x + (-x) &= (a \formalminus b) + (b \formalminus a) \\
+		&= (a + b) \formalminus (b + a) \\
+		&= (a + b) \formalminus (a + b) \\
+		&= 0 \formalminus 0 \\
+		&= 0.
+	\end{split}\]
+	Therefore, $x + (-x) = (-x) + x = 0$.
+	
+	(I will prove the rest of the identities later.)
+	
+	\subsection*{Exercise 4.1.7 (partially done)}
+	
+	\noindent (a) If $a > b$, we will show that $a - b$ is a positive natural number. Since $a \ge b$, there exists $d \in \mathbf{N}$ such that $a = b + d$. Subtracting $b$ from both sides gives $a - b = (b + d) - b$. We know that
+	\[\begin{split}
+		\text{Unfinished}
+	\end{split}\]
 \end{document}
