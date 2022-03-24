@@ -311,7 +311,7 @@
 	
 	We know that $-1 = -(1 \formalminus 0) = 0 \formalminus 1$. If $a = a_1 \formalminus a_2$, $(-1) \cdot a = (0 \cdot a_1 + 1 \cdot a_2) \formalminus (0 \cdot a_2 + 1 \cdot a_1) = a_2 \formalminus a_1 = -a$.
 	
-	\subsection*{Exercise 4.1.4 (partially done)}
+	\subsection*{Exercise 4.1.4}
 	
 	I will write $x = a \formalminus b$, $y = c \formalminus d$, and $z = e \formalminus f$, where $a, b, c, d, e, f \in \mathbf{N}$.
 	
@@ -352,7 +352,37 @@
 	\end{split}\]
 	Therefore, $x + (-x) = (-x) + x = 0$.
 	
-	(I will prove the rest of the identities later.)
+	To show that $xy = yx$, we will use the definition of integer multiplication:
+	\begin{align*}
+		xy &= (a \formalminus b)(c \formalminus d) \\
+		&= (ac + bd) \formalminus (ad + bc) \\
+		yx &= (c \formalminus d)(a \formalminus b) \\
+		&= (ca + db) \formalminus (cb + da) \\
+		&= (ac + bd) \formalminus (ad + bc) \\
+		&= xy.
+	\end{align*}
+	
+	\emph{Note that} $(xy)z = x(yz)$ \emph{was proved in in the section about proving Proposition 4.1.6 on page 4.1.}
+	
+	For the statement $x1 = 1x = x$, we only have to prove that $1x = x$, because we have already proved that $xy = yx$ earlier:
+	\[\begin{split}
+		1x &= (1 \formalminus 0) \cdot (a \formalminus b) \\
+		&= (1a + 0b) \formalminus (1b + 0a) \\
+		&= a \formalminus b \\
+		&= x.
+	\end{split}\]
+	
+	Now we will show that $x(y + z) = xy + xz$:
+	\[\begin{split}
+		x(y + z) &= (a \formalminus b)((c \formalminus d) + (e \formalminus f)) \\
+		&= (a \formalminus b)((c + e) \formalminus (d + f)) \\
+		&= (a(c + e) + b(d + f)) \formalminus (a(d + f) + b(c + e)) \\
+		&= (ac + ae + bd + bf) \formalminus (ad + af + bc + be) \\
+		&= ((ac + bd) \formalminus (ad + bc)) + ((ae + bf) \formalminus (af + be)) \\
+		&= xy + xz.
+	\end{split}\]
+	
+	We can show that $(y + z)x = yx + zx$ using $xy = yx$ and $x(y + z) = xy + xz$ by simply swapping $x(y + z)$ with $(y + z)x$, $xy$ with $yx$, and $xz$ with $zx$.
 	
 	\subsection*{Exercise 4.1.7 (partially done)}
 	
