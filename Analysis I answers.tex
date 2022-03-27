@@ -388,11 +388,25 @@
 	
 	\noindent (a) If $a > b$, we will show that $a - b$ is a positive natural number. Since $a \ge b$, there exists $d \in \mathbf{N}$ such that $a = b + d$. Subtracting $b$ from both sides gives $a - b = (b + d) - b$. We know that \[(b + d) - b = (b + d) + (-b) = (d + b) + (-b) = d + (b + (-b)) = d + 0 = d.\] Therefore, $a - b = d$. Since $d = 0$ implies $a = b + 0 = b$, which contradicts $a > b$, $a - b$ must be a nonzero, or positive, natural number.
 	
+	Now we will show that if $a - b$ is a positive natural number, $a > b$. We know that $a \ge b$, since $a = a + (-b) + b = (a - b) + b$. We also know that $a \ne b$ because otherwise, $a - b$ would be $0$. Therefore, $a > b$.
+	
 	\bigskip
 	\noindent (b) When $a > b$, by (a), $a - b \ne 0$. Since $c - c = c + (-c) = 0$ (by Proposition 4.1.6 and the definition of subtraction on page 79), $a - b + c - c \ne 0 + c - c = 0$. By Proposition 4.1.6 and the fact that $-(-x) = x$ (if $x = a \formalminus b$, $-x = b \formalminus a$, and $-(-x)$ is just $a \formalminus b$ again),
 	\begin{multline*} a - b + c - c = a + (-b) + c + (-c) \\ = (a + (-c)) + (-b) + (-(-c)) = (a - c) - (b - c). \end{multline*}
 	Therefore, $a + c > b + c$.
 	
 	\bigskip
-	\noindent (c)
+	\noindent (c) Since $a > b$, $a - b$ is a positive natural number. Since $c$ is also a positive natural number, by Lemma 2.3.3, $(a - b)c$ is also a positive natural number. The distributive law for natural numbers (Proposition 2.3.4) tells us that $(a - b)c = ac - bc$, and therefore $ac > bc$.
+	
+	\bigskip
+	\noindent (d) Since $a > b$, $a - b$ is a positive natural number. But this means that $-a < -b$, since $-b = (a - b) + (-a)$.
+	
+	\bigskip
+	\noindent (e) Since $a > b$ and $b > c$, $a - b$ and $b - c$ are both positive natural numbers. By Proposition 2.2.8, $(a - b) + (b - c)$ is also a positive natural number. We know that \[(a - b) + (b - c) = a + (-b) + b + (-c) = a + 0 + (-c) = a + (-c) = a.\] Therefore, $a > c$.
+	
+	\bigskip
+	\noindent (f) First, we will show that at least one of the statements $a > b$, $a < b$, and $a = b$ is true. By Lemma 4.1.5 (trichotomy of integers), $a - b$ is either zero, positive, or negative. If it is $0$, \[a = (a - b) + b = 0 + b = b.\] If $a - b$ is positive, by part (a), $a > b$. When $a - b$ is negative, it is the negation of some positive natural number $d$. Since $-(-d)$ is equal to $d$ itself and $-(a - b) = b - a$, $d = b - a$. Therefore, $b > a$. We have now proved that at least one of the statements $a > b$, $a < b$, and $a = b$ is true.
+	
+	Now, we will show that no two of these statements can be true at the same time. It is obvious from the definition of ordering on the integers (Definition 4.1.10) that $a = b$ cannot be true at the same time as $a > b$ or $a < b$. Now the only thing left is to prove that $a > b$ and $a < b$ cannot both be true. We will prove this using proof by contradiction. The statement that $a > b$ is equivalent to $a - b$ being positive, and $a < b$ is equivalent to $b - a$ being positive. But by Lemma 4.1.5 (the trichotomy of integers) and the fact that $b - a = -(a - b)$ give us a contradiction, as $b - a$ cannot both be positive and negative. We have now proved that exactly one of the statements $a > b$, $a < b$, or $a = b$ is true.
+	
 \end{document}
