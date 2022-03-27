@@ -43,23 +43,23 @@
 	
 	\noindent (a) By Lemma 2.2.2, $a = a + 0$, so $a \ge a$.
 	
-	\medskip
+	\bigskip
 	\noindent (b) Because $a \ge b$ and $b \ge c$, $a = b + n$ and $b = c + m$ for some $n$ and $m$. Therefore, $a = b + n = (c + m) + n$. By Proposition 2.2.5, $(c + m) + n = c + (m + n)$, so $a = c + (m + n)$. $n + m$ is a natural number, so $a \ge c$.
 	
-	\medskip
+	\bigskip
 	\noindent (c) Because $a \ge b$ and $b \ge a$, $a = b + n$ and $b = a + m$. Therefore, $a = b + n = (a + m) + n$. By Proposition 2.2.5, $(a + m) + n = a + (m + n)$. Now we have $a = a + (m + n)$. By Lemma 2.2.2, $a = a + 0$, so we can use Proposition 2.2.6 to get $0 = m + n$. Using Corollary 2.2.9, we can deduce that $n$ and $m$ are both equal to $0$. Therefore, $a = b$.
 	
-	\medskip
+	\bigskip
 	\noindent (d) If $a \ge b$, $a = b + d$ for some $d$. Because of this, $a + c = (b + d) + c$. By Propositions 2.2.4 and 2.2.5, $(b + d) + c = b + (d + c) = b + (c + d) = (b + c) + d$. Therefore, $a + c \ge b + c$.
 	
 	Conversely, if $a + c \ge b + c$, $a + c = (b + c) + d$ for some $d$. By Propositions 2.2.4 and 2.2.5, $(b + c) + d = b + (c + d) + b + (d + c) = (b + d) + c$. Using Proposition 2.2.6, we get $a = b + d$, and therefore, $a \ge b$.
 	
-	\medskip
+	\bigskip
 	\noindent (f) If $a < b$, $b = a + c$ for some $c$, and $b \ne a$. Therefore, $c$ is positive, because otherwise $b = a + 0 = a$. ($a + 0 = a$ because of Lemma 2.2.2.)
 	
 	Conversely, if $b = a + c$ for some positive number $c$, we know that $a \le b$. If $a = b$, $a = a + c$. By Lemma 2.2.2, $a = a + 0$, so $a + 0 = a + c$. We can use Proposition 2.2.6 to get $0 = c$, but $c$ is positive. Therefore, $a \ne b$, and combined with $a \le b$, we get $a < b$.
 	
-	\medskip
+	\bigskip
 	\noindent (e) We first prove that $a < b$ implies that $a \increment \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \increment = c$. Therefore, $b = a + d \increment$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \increment = (a + d) \increment = (a \increment) + d$. Therefore, $a \increment \le b$.
 	
 	Conversely, if $a \increment \le b$, we need to prove that $a < b$. Since $a \increment = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \increment \le a$, and we get, from (c), that $a \increment = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
@@ -160,7 +160,7 @@
 	
 	If $P(x)$ is the property that $x$ is a natural number, then $\mathbf{N} = \{x: P(x) \text{ is true}\}$ exists, by Axiom 3.9.
 	
-	\section*{Functions}
+	\section{Functions}
 	
 	\subsection*{Exercise 3.3.2}
 	
@@ -210,7 +210,7 @@
 	
 	By Exercise 3.3.2, $g \circ f$ is both injective and surjective, and is therefore bijective. The only thing left we have to prove is that $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = x$. But $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = (f^{-1} \circ f)(x) = x$, and we have proved what we want.
 	
-	\section*{Images and inverse images}
+	\section{Images and inverse images}
 	
 	\subsection*{Challenge to define $f(S)$ using the axiom of specification}
 	
@@ -311,7 +311,7 @@
 	
 	We know that $-1 = -(1 \formalminus 0) = 0 \formalminus 1$. If $a = a_1 \formalminus a_2$, $(-1) \cdot a = (0 \cdot a_1 + 1 \cdot a_2) \formalminus (0 \cdot a_2 + 1 \cdot a_1) = a_2 \formalminus a_1 = -a$.
 	
-	\subsection*{Exercise 4.1.4 (partially done)}
+	\subsection*{Exercise 4.1.4}
 	
 	I will write $x = a \formalminus b$, $y = c \formalminus d$, and $z = e \formalminus f$, where $a, b, c, d, e, f \in \mathbf{N}$.
 	
@@ -352,12 +352,47 @@
 	\end{split}\]
 	Therefore, $x + (-x) = (-x) + x = 0$.
 	
-	(I will prove the rest of the identities later.)
+	To show that $xy = yx$, we will use the definition of integer multiplication:
+	\begin{align*}
+		xy &= (a \formalminus b)(c \formalminus d) \\
+		&= (ac + bd) \formalminus (ad + bc) \\
+		yx &= (c \formalminus d)(a \formalminus b) \\
+		&= (ca + db) \formalminus (cb + da) \\
+		&= (ac + bd) \formalminus (ad + bc) \\
+		&= xy.
+	\end{align*}
+	
+	\emph{Note that} $(xy)z = x(yz)$ \emph{was proved in in the section about proving Proposition 4.1.6 on page 4.1.}
+	
+	For the statement $x1 = 1x = x$, we only have to prove that $1x = x$, because we have already proved that $xy = yx$ earlier:
+	\[\begin{split}
+		1x &= (1 \formalminus 0) \cdot (a \formalminus b) \\
+		&= (1a + 0b) \formalminus (1b + 0a) \\
+		&= a \formalminus b \\
+		&= x.
+	\end{split}\]
+	
+	Now we will show that $x(y + z) = xy + xz$:
+	\[\begin{split}
+		x(y + z) &= (a \formalminus b)((c \formalminus d) + (e \formalminus f)) \\
+		&= (a \formalminus b)((c + e) \formalminus (d + f)) \\
+		&= (a(c + e) + b(d + f)) \formalminus (a(d + f) + b(c + e)) \\
+		&= (ac + ae + bd + bf) \formalminus (ad + af + bc + be) \\
+		&= ((ac + bd) \formalminus (ad + bc)) + ((ae + bf) \formalminus (af + be)) \\
+		&= xy + xz.
+	\end{split}\]
+	
+	We can show that $(y + z)x = yx + zx$ using $xy = yx$ and $x(y + z) = xy + xz$ by simply swapping $x(y + z)$ with $(y + z)x$, $xy$ with $yx$, and $xz$ with $zx$.
 	
 	\subsection*{Exercise 4.1.7 (partially done)}
 	
-	\noindent (a) If $a > b$, we will show that $a - b$ is a positive natural number. Since $a \ge b$, there exists $d \in \mathbf{N}$ such that $a = b + d$. Subtracting $b$ from both sides gives $a - b = (b + d) - b$. We know that
-	\[\begin{split}
-		\text{Unfinished}
-	\end{split}\]
+	\noindent (a) If $a > b$, we will show that $a - b$ is a positive natural number. Since $a \ge b$, there exists $d \in \mathbf{N}$ such that $a = b + d$. Subtracting $b$ from both sides gives $a - b = (b + d) - b$. We know that \[(b + d) - b = (b + d) + (-b) = (d + b) + (-b) = d + (b + (-b)) = d + 0 = d.\] Therefore, $a - b = d$. Since $d = 0$ implies $a = b + 0 = b$, which contradicts $a > b$, $a - b$ must be a nonzero, or positive, natural number.
+	
+	\bigskip
+	\noindent (b) When $a > b$, by (a), $a - b \ne 0$. Since $c - c = c + (-c) = 0$ (by Proposition 4.1.6 and the definition of subtraction on page 79), $a - b + c - c \ne 0 + c - c = 0$. By Proposition 4.1.6 and the fact that $-(-x) = x$ (if $x = a \formalminus b$, $-x = b \formalminus a$, and $-(-x)$ is just $a \formalminus b$ again),
+	\begin{multline*} a - b + c - c = a + (-b) + c + (-c) \\ = (a + (-c)) + (-b) + (-(-c)) = (a - c) - (b - c). \end{multline*}
+	Therefore, $a + c > b + c$.
+	
+	\bigskip
+	\noindent (c)
 \end{document}
