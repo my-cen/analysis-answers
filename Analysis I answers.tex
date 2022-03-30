@@ -413,4 +413,146 @@
 	
 	If $P(n)$ is the property that $n > -1$, $P(0)$ is true, because $0 = (-1) + 1$ and $0 \ne -1$. Also, if $P(n)$ is true, since $n \increment > n$, by Lemma 4.1.11(e), $P(n \increment)$ is true. However, $P(-1)$ is obviously false, since $-1 = -1$.
 	
+	\section{The rationals}
+	
+	\subsection*{Exercise 4.2.1}
+	
+	\paragraph*{Proving that equality is reflexive (for rational numbers)}
+	
+	We know that for any $a, b \in \mathbf{Z}$ where $b \ne 0$, $ab = ab$. Therefore, $a // b = a // b$.
+	
+	\paragraph*{Proving that equality is symmetric}
+	
+	If for $a, b, c, d \in \mathbf{Z}$ that satisfy $b, d \ne 0$, we have $a // b = c // d$, then $ad = cb$. Hence, $cb = ad$, and $c // d = a // b$.
+	
+	\paragraph*{Proving that equality is transitive}
+	
+	If $a, b, c, d, e, f \in \mathbf{Z}$ where $b, d, f \ne 0$, $a // b = c // d$, and $c // d = e // f$, then we must have $ad = cb$ and $cf = ed$. Hence, $ad \cdot cf = cb \cdot ed$. By Corollary 4.1.9, we can remove $c$ and $d$ from both sides:
+	\[a \cdot f = b \cdot e.\]
+	Therefore, by Definition 4.2.1, $a // b = e // f$, and we have proved that rational number equality is reflexive, symmetric, and transitive.
+	
+	\subsection*{Exercise 4.2.3}
+	
+	I will assume that $x = a // b$, $y = c // d$, and $z = e // f$, where $a, b, c, d, e, f \in \mathbf{Z}$ and $b, d, f \ne 0$.
+	
+	First, we will prove that $x + y = y + x$:
+	\begin{align*}
+		x + y &= (a // b) + (c // d) \\
+		&= (ad + bc) // (bd) \\
+		y + x &= (c // d) + (a // b) \\
+		&= (cb + da) // (db) \\
+		&= (ad + bc) // (bd) \\
+		&= x + y.
+	\end{align*}
+	
+	\emph{The identity} $(x + y) + z$ \emph{was proved on page 84 already.}
+	
+	Next, we will prove that $x + 0 = 0 + x = x$. We have already proved that $x + y = y + x$, so we only need to show that $x + 0 = x$:
+	\[\begin{split}
+		x + 0 &= (a // b) + (0 // 1) \\
+		&= (a \cdot 1 + b \cdot 0) // (b \cdot 1) \\
+		&= a // b \\
+		&= x.
+	\end{split}\]
+	
+	For the next identity, $x + (-x) = (-x) + x = 0$, we have already shown that $x + y = y + x$, so we only need to prove $x + (-x) + 0$:
+	\[\begin{split}
+		x + (-x) &= (a // b) + ((-a) // b) \\
+		&= (ab + b \cdot (-a)) // (b \cdot b) \\
+		&= 0 // (b \cdot b) \\
+		&= 0.
+	\end{split}\]
+	The last step is valid because $0 \cdot 1 = 0 \cdot (b \cdot b)$.
+	
+	Now we prove that $xy = yx$:
+	\begin{align*}
+		xy &= (a // b) \cdot (c // d) \\
+		&= (ac) // (bd) \\
+		yx &= (c // d) \cdot (a // b) \\
+		&= (ca) // (db) \\
+		&= xy.
+	\end{align*}
+	
+	We now prove that $(xy)z = x(yz)$:
+	\begin{align*}
+		(xy)z &= ((a // b) \cdot (c // d)) \cdot (e // f) \\
+		&= ((ac) // (bd)) \cdot (e // f) \\
+		&= (ace) // (bdf) \\
+		x(yz) &= (a // b) \cdot ((c // d) \cdot (e // f)) \\
+		&= (a // b) \cdot ((ce) // (df)) \\
+		&= (ace) // (bdf) \\
+		&= (xy)z.
+	\end{align*}
+	
+	Next, we prove $x1 = 1x = x$. We have already proved that $xy = yx$, so we only need to prove $x \cdot 1 = x$:
+	\[\begin{split}
+		x \cdot 1 &= (a // b) \cdot (1 // 1) \\
+		&= (a \cdot 1) // (b \cdot 1) \\
+		&= a // b \\
+		&= x.
+	\end{split}\]
+	
+	The next identity to prove is $x(y + z) = xy + xz$:
+	\begin{align*}
+		x(y + z) &= (a // b)((c // d) + (e // f)) \\
+		&= (a // b)((cf + de) // (df)) \\
+		&= (a(cf + de)) // (bdf) \\
+		&= (acf + ade) // (bdf) \\
+		xy + xz &= ((ac) // (bd)) + ((ae) // (bf)) \\
+		&= (acbf + bdae) // (b^2 df) \\
+		&= (acf + dae) // (bdf) \\
+		&= x(y + z).
+	\end{align*}
+	
+	For the identity $(y + z)x = yx + zx$, we can just apply $xy = yx$ and $x(y + z) = xy + xz$ together.
+	
+	Finally, we will prove that $xx^{-1} = x^{-1}x = 1$, when $x \ne 0$. We know that $x^{-1}$ exists because otherwise, $a \ne 0$, and therefore $x$ would be $0$. Since $xy = yx$, we only need to show that $xx^{-1} = 1$:
+	\[\begin{split}
+		xx^{-1} &= (a // b)(b // a) \\
+		&= (ab) // (ab) \\
+		&= 1.
+	\end{split}\]
+	(The last step comes from Definition 4.2.1).
+	
+	\subsection*{Exercise 4.2.5}
+	
+	\noindent (a) By Lemma 4.2.7, we know that exactly one of the statements ``$x - y = 0$'', ``$x - y$ is positive'', or ``$x - y$ is negative'' is true. We now can use Definition 4.2.8 to deduce that exactly one of the statements $x = y$, $x > y$, or $x < y$ is true.
+	
+	\bigskip
+	\noindent (b) If $x < y$, $x - y$ must be a negative rational number. Hence, $y - x$ is positive, and $y > x$. Similarly, we can show that $y > x$ implies $x < y$.
+	
+	\bigskip
+	\noindent (c) By (b), we know that $y > x$ and $z > y$. Thus, $y - x$ and $z - y$ are positive. If $y - x = a // b$ and $z - y = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is possible by Definition 4.2.6),
+	\[\begin{split}
+		z - x &= z - y + y - x \\
+		&= (ad + bc) // (bd)
+	\end{split}\]
+	which is positive, and therefore $z > x$. We now have proved that $x < z$.
+	
+	\bigskip
+	\noindent (d) By (b), we know that $y > x$, and hence, $y - x$ is positive. If $y - x = a // b$, we know that
+	\[\begin{split}
+		y + z - (x + z) &= y + z - x - z \\
+		&= y - x
+	\end{split}\]
+	and therefore $y + z > x + z$. Hence, $x + z < y + z$.
+	
+	\bigskip
+	\noindent (e) Because of part (b), we know that $y > x$, and thus, $y - x$ is positive. Assuming that $y - x = a // b$ and $z = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is possible by Definition 4.2.6),
+	\[\begin{split}
+		yz - xz &= (y - x)z \\
+		&= (a // b)(c // d) \\
+		&= (ac) // (bd)
+	\end{split}\]
+	and hence, $yz > xz$ and $xz < yz$.
+	
+	\subsection*{Exercise 4.2.6}
+	
+	We know that $x - y$ is positive. Assuming that $y - x = a // b$ and $z = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is always possible by Definition 4.2.6), we have that
+	\[\begin{split}
+		yz - xz &= (y - x)z \\
+		&= (ac) // (bd)
+	\end{split}\]
+	and therefore, $xz > yz$.
+	
 \end{document}
