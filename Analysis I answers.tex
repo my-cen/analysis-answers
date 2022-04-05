@@ -557,4 +557,24 @@
 	\end{split}\]
 	and therefore, $xz > yz$.
 	
+	\section{Absolute value and exponentiation}
+	
+	\subsection*{Exercise 4.3.3(a)}
+	
+	\noindent (a) First, we prove that $x^n x^m = x^{n + m}$. We induct on $m$. When $m = 0$, $x^m = 1$, and hence, $x^n x^m = x^n$. But $x^{n + m} = x^{n + 0} = x^n$, and therefore, $x^n x^m = x^{n + m}$ is true when $m = 0$. When $x^n x^m = x^{n + m}$,
+	\[x^n x^{m \increment} = x^n x^m \cdot x = x^{n + m} \cdot x = x^{n + (m \increment)},\]
+	and we have proved that $x^n x^m = x^{n + m}$ for all $n$ and $m$.
+	
+	Next, we prove that $(x^n)^m = x^{nm}$, again by induction on $m$. When $m = 0$, it is obvious that both $(x^n)^m$ and $x^{nm}$ are both $1$, since anything to the power of $0$ is $1$. Now, we prove that if $(x^n)^m = x^{nm}$ for some $n$ and $m$, $(x^n)^{m \increment} = x^{n(m \increment)}$. We know that $(x^n)^{m \increment} = x^n \cdot (x^n)^m$. Using Definition 4.3.9, we get that
+	\[x^n \cdot (x^n)^m = (x^n)^{m \increment}.\]
+	We have finished proving that $(x^n)^m = x^{nm}$ for all $n$ and $m$.
+	
+	We will now prove that $(xy)^n = x^n y^n$, again using induction, except on $n$. When $n = 0$, it is obvious that both sides are equal to $1$. If $(xy)^n = x^n y^n$, we can multiply both sides of the equation by $xy$ to get that
+	\[(xy)^{n \increment} = x^{n \increment} y^{n \increment}.\]
+	We have completed showing that $(xy)^n = x^n y^n$.
+	
+	\subsection*{Exercise 4.3.5}
+	
+	We use induction on $N$, with base case $N = 1$. For the base case, $2^1 = 2 > 1$. For the inductive step, we multiply both sides of $2^N \ge N$ by $2$ to get $2^{N \increment} \ge 2N$. Since $2N = N + N \ge N + 1$, $2^{N \increment} \ge N \increment$. We have finished proving that $2^N \ge N$ for all positive integers $N$.
+	
 \end{document}
