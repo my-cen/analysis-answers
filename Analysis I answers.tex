@@ -577,4 +577,12 @@
 	
 	We use induction on $N$, with base case $N = 1$. For the base case, $2^1 = 2 > 1$. For the inductive step, we multiply both sides of $2^N \ge N$ by $2$ to get $2^{N \increment} \ge 2N$. Since $2N = N + N \ge N + 1$, $2^{N \increment} \ge N \increment$. We have finished proving that $2^N \ge N$ for all positive integers $N$.
 	
+	\section{Gaps in the rational numbers}
+	
+	\subsection*{Exercise 4.4.1}
+	
+	If $x = \frac{a}{b}$ and $a, b \in \mathbf{N}$, by Proposition 2.3.9 (the Euclidean algorithm), there exist $m$ and $r$ in $\mathbf{N}$ such that $0 \le r < b$ and $a = mb + r$. Dividing both sides by $b$ yields that
+	\[x = m + \frac{r}{b}.\]
+	Because $0 \le r < b$, $0 \le \frac{r}{b} < 1$. Adding $m$ to $0$, $\frac{r}{b}$, and $1$ gives that $m \le m + \frac{r}{b} < m + 1$. But $m + \frac{r}{b} = x$, so we have proved that $m \le x < m + 1$. To prove that there exists some natural number $N$ greater than $x$, we set $N$ to be $m + 1$ when $m + 1 \ge 0$ and $0$ when $m + 1 < 0$. (This works because when $m + 1 \ge 0$, it is a natural number and greater than $x$, as we proved before. When $m + 1 < 0$, $N = 0$ works because $0 > m + 1 > x$.)
+	
 \end{document}
