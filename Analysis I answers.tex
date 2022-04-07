@@ -585,4 +585,12 @@
 	\[x = m + \frac{r}{b}.\]
 	Because $0 \le r < b$, $0 \le \frac{r}{b} < 1$. Adding $m$ to $0$, $\frac{r}{b}$, and $1$ gives that $m \le m + \frac{r}{b} < m + 1$. But $m + \frac{r}{b} = x$, so we have proved that $m \le x < m + 1$. To prove that there exists some natural number $N$ greater than $x$, we set $N$ to be $m + 1$ when $m + 1 \ge 0$ and $0$ when $m + 1 < 0$. (This works because when $m + 1 \ge 0$, it is a natural number and greater than $x$, as we proved before. When $m + 1 < 0$, $N = 0$ works because $0 > m + 1 > x$.)
 	
+	\subsection*{Exercise 4.4.3}
+	
+	\paragraph*{Showing that every natural number is either even or odd, but not both} Let $n$ be a natural number. By the Euclidean algorithm (Proposition 2.3.9), every natural number is equal to $2m + r$, where $m, r \in \mathbf{N}$ and $0 \le r < 2$. This implies that every natural number is either even or odd. Now, we show that $n$ cannot be both even and odd, by showing that having both at the same time will cause a contradiction. A natural number $n$ being both even and odd must be equal to $2a$ and $2b + 1$ at the same time, where $a, b \in \mathbf{N}$. If $a > b$, $2a > 2b + 1$, and we have a contradiction, because then $2a \ne 2b + 1$. When $b \ge a$, $2b + 1 > 2a$, and we also have a contradiction.
+	
+	\paragraph*{Showing that an odd natural number $n$ has an odd square $n^2$}
+	
+	We know that $n = 2m + 1$ for some $m \in \mathbf{N}$. Therefore, $n^2 = 4m^2 + 2m + 1 = 2m(2m + 1) + 1$, and therefore, $n^2$ is also odd.
+	
 \end{document}
