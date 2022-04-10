@@ -601,4 +601,13 @@
 	
 	Since $(a_n)_{n = 1}^\infty$ is a Cauchy sequence, it is eventually $1$-steady. Thus, for some $m$, $(a_n)_{n = m}^\infty$ is $1$-steady. By Lemma 5.1.14, the finite sequence $a_1, \dotsc, a_{m - 1}$ is bounded. Also, $(a_n)_{n = m}^\infty$ is bounded by $|a_m| + 1$. Therefore, $(a_n)_{n = 1}^\infty$ is bounded by the greater of the bounds for $a_1, \dotsc, a_{m - 1}$ and $(a_n)_{n = m}^\infty$.
 	
+	\section{Equivalent Cauchy sequences}
+	
+	\subsection*{Exercise 5.2.1}
+	
+	We will only prove that $(a_n)_{n = 1}^\infty$ being a Cauchy sequence implies that $(b_n)_{n = 1}^\infty$ is also a Cauchy sequence; we can replace $a_n$ with $b_n$ and $b_n$ with $a_n$, anyways.
+	
+	For any rational $\epsilon > 0$, there exist natural numbers $m_1$ and $m_2$ such that $(a_n)_{n = m_1}^\infty$ is $\frac{\epsilon}{3}$-steady and such that $(a_n)_{n = m_2}^\infty$ and $(b_n)_{n = m_2}^\infty$ are $\frac{\epsilon}{3}$-close. If $m$ is defined to be $m_1$ when $m_1 \ge m_2$ and $m_2$ when $m_1 < m_2$, $(b_n)_{n = m}^\infty$ is $\epsilon$-steady, because for any $x, y \in \mathbf{N}$ greater than or equal to $m$,
+	\[d(a_x, a_y), d(a_x, b_x), d(a_y, b_y) \le \frac{\epsilon}{3}.\]
+	
 \end{document}
