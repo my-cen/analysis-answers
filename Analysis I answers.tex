@@ -636,4 +636,34 @@
 	\[\frac{1}{m'} \le \frac{1}{m} \le \epsilon,\]
 	the sequence $1/1, 1/2, 1/3, \dotsc$ is eventually $\epsilon$-close to the sequence $0, 0, 0, \dotsc$. Therefore, $\formallim_{n \to \infty} 1/n = 0$.
 	
+	\section{Ordering the reals}
+	
+	\subsection*{Exercise 5.4.2}
+	
+	\noindent (a) By Proposition 5.4.4, exactly one of the statements ``$x - y$ is positive'', ``$x - y$ is equal to $0$'', or ``$x - y$ is negative'' is true. These statements correspond to ``$x > y$'', ``$x = y$'', and ``$x < y$'' respectively.
+	
+	\bigskip
+	\noindent (b) By Proposition 5.4.4, $x - y$ is negative if and only if $y - x$ is positive. Hence, $x < y$ if and only if $y > x$.
+	
+	\bigskip
+	\noindent (c) Since $x < y$ and $y < z$, $y > x$ and $z > y$ (by part (b)). Thus, $y - x$ and $z - y$ are positive. We know that $z - y + y - x = z - x$. Therefore, by Proposition 5.4.4, $z - x$ is positive and $z > x$. Using part (b) again, we get that $x < z$.
+	
+	\bigskip
+	\noindent (d) By part (b), $y - x$ is positive. Since $y + z - (x + z)$ is equal to $y - x$, $x + z < y + z$.
+	
+	\subsection*{Exercise 5.4.4}
+	
+	By Proposition 5.4.12, there exist some integers $a$ and $b$ such that $a, b \ne 0$ and $0 < \frac{a}{b} \le x$. Since
+	\[0 < \frac{1}{2b|a| / a} \le \frac{|a|}{2b|a| / a} = \frac{a}{2b} < \frac{a}{b}\]
+	 and $2b|a| / a$ is a positive integer, we can define $N$ as $2b|a| / a$.
+	
+	\subsection*{Exercise 5.4.5}
+	
+	By Corollary 5.4.13 (the Archimedean property), there exists a positive integer $b$ such that $b(y - x) > 1$. Thus, $a \coloneqq
+	\begin{cases}
+		y - 1 & \text{if } y \in \mathbf{Z} \\
+		\lfloor y \rfloor & \text{if } y \not \in \mathbf{Z}
+	\end{cases}$
+	is greater than $bx$ and less than $by$. Therefore, $x < \frac{a}{b} < y$.
+	
 \end{document}
