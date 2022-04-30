@@ -682,4 +682,49 @@
 	
 	For any two real numbers $x < y$, there is a rational number $a$ such that $x < a < y$, by Proposition 5.4.14. Using Proposition 5.4.14 again, we can see that there also is a rational number $b$ such that $a < b < y$. Therefore, $x < a < b < y$. We can choose some rational number $c$ such that $a - \sqrt{2} < c < b - \sqrt{2}$. Thus, $a < c + \sqrt{2} < b$. If $c + \sqrt{2} \in \mathbf{Q}$, $c + \sqrt{2} - c = \sqrt{2}$ is also rational. Therefore, $c + \sqrt{2}$ is irrational. We have finished constructing an irrational number $c + \sqrt{2}$ such that $x < c + \sqrt{2} < y$.
 	
+	\section{Real exponentiation, part I}
+	
+	\subsection*{Exercise 5.6.2 (unfinished)}
+	
+	Assume that $q = a / b$ and $r = c / d$, where $a$, $b$, $c$, and $d$ are integers. Also, we assume that $b$ and $d$ are nonzero.
+	
+	\bigskip
+	\noindent (a) By Definition 5.6.7, $x^q = (x^{1 / b})^a$. We know that $x$ is positive, so $x^{1 / b}$ is also positive. Hence, $x^q = (x^{1 / b})^a$ is also positive.
+	
+	\bigskip
+	\noindent (b) Since $q = \frac{ad}{bd}$ and $r = \frac{bc}{bd}$,
+	\[x^{q + r} = x^{(ad + bc) / bd} = (x^{1 / bd})^{ad + bc}.\]
+	By Proposition 5.6.3, $(x^{1 / bd})^{ad + bc} = (x^{1 / bd})^{ad} (x^{1 / bd})^{bc}$. Thus, $x^{q + r} = x^q x^r$.
+	
+	Similarly, we can prove that $(x^q)^r = x^{qr}$. First, we manipulate $(x^q)^r$:
+	\[\begin{split}
+		(x^q)^r &= (x^{ad / bd})^{c / d} \\
+		&= (((x^{1 / bd})^{ad})^{1 / d})^c \\
+		&= ((x^{1 / bd})^a)^c \\
+		&= (x^{1 / bd})^{ac} \\
+		&= x^{ac / bd}.
+	\end{split}\]
+	By replacing $ac / bd$ with $qr$ now, we obtain the result.
+	
+	\bigskip
+	\noindent (c) We know that
+	\[x^{-q} = (x^{1 / b})^{-a}.\]
+	Therefore, $x^{-q} = \frac{1}{(x^{1 / b})^a} = \frac{1}{x^q}$.
+	
+	\bigskip
+	\noindent (d) Since $q$ is positive, we can safely assume that $a$ and $b$ are also positive. (If they are not, they must be both negative, and we can use $-a$ and $-b$ instead of $a$ and $b$). If $x > y$, by Proposition 5.6.3 and Lemma 5.6.6(d), $(x^{1 / b})^a > (y^{1 / b})^a$. The left side is equal to $x^q$ and the right side is equal to $y^q$. Therefore, $x^q > y^q$.
+	
+	If $x^q > y^q$, $(x^{1 / b})^a > (y^{1 / b})^a$; thus, $((x^{1 / b})^a)^{1 / a} > ((y^{1 / b})^a)^{1 / a}$. Therefore, $x^{1 / b} > y^{1 / b}$. Similarly, we can obtain that $x > y$.
+	
+	\bigskip
+	\noindent (e) ?
+	
+	\subsection*{Exercise 5.6.3}
+	
+	If $x$ is positive, by Proposition 5.6.3 and Proposition 4.3.12(b), $y > 0$ implies $y^2 \le x^2$ if and only if $y \le x$. By Definition 5.6.4, the definition of $\sqrt{x}$, $\sqrt{x^2} = \sup \{y \in \mathbf{R}: y \ge 0 \text{ and } y \le x\}$. Therefore, $\sqrt{x^2} = x$ when $x$ is positive.
+	
+	If $x$ is $0$, it is obvious that $\sqrt{x^2} = \sup \{y \in \mathbf{R}: y = 0\} = 0$.
+	
+	If $x$ is negative, we can use the case for when $x$ is positive except for replacing $x$ with $-x$.
+	
 \end{document}
