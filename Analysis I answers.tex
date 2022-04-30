@@ -735,4 +735,10 @@
 	
 	We induct on $m$, starting from $m = n + 1$. We have assumed that $a_{n + 1} > a_n$ already. Now, if $a_m > a_n$ and $m > n$, $a_{m + 1} > a_m > a_n$. We have proved $a_m > a_n$ for all $m > n$, as desired.
 	
+	\subsection*{Exercise 6.1.3}
+	
+	If $(a_n)_{n = m}^\infty$ converges to $c$, for any real number $\epsilon > 0$, there exists a natural number $k \ge m$ such that $(a_n)_{n = k}^\infty$ is $\epsilon$-close to $c$. We can define $k'$ to be $k$ if $k \ge m'$ and $m'$ if $k < m'$. We know that $k' \ge m'$ and that $(a_n)_{n = k'}^\infty$ is $\epsilon$-close to $c$ from this definition. Since we can do this for any $\epsilon > 0$, $(a_n)_{n = m'}^\infty$ converges to $c$.
+	
+	If $(a_n)_{n = m'}^\infty$ converges to $c$, for any real number $\epsilon > 0$, there exists a natural number $k \ge m'$ such that $(a_n)_{n = k}^\infty$ is $\epsilon$-close to $c$. Since $k \ge m' \ge m$, $(a_n)_{n = m}^\infty$ converges to $c$.
+	
 \end{document}
