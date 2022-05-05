@@ -757,4 +757,22 @@
 	\[\lim_{n \to \infty} (b_n) = 0.\]
 	But then, $a_n / b_n = n$. Therefore, $(a_n / b_n)_{n = m}^\infty$ is not bounded. By Corollary 6.1.17, $(a_n / b_n)_{n = m}^\infty$ is not convergent, and hence, Theorem 6.1.19(f) does not necessarily work when $\lim_{n \to \infty} (b_n) = 0$.
 	
+	\section{The Extended real number system}
+	
+	\subsection*{Exercise 6.2.2}
+	
+	\noindent (a) If $E \subseteq \mathbf{R}$, we use Definition 5.5.10 to obtain this part of this theorem. If $+\infty \in E$, $\sup E = +\infty$ and therefore $x \le \sup E$ for any $x$. If $+\infty \notin E$ and $-\infty \in E$, $\sup E = \sup(E \backslash \{-\infty\})$. All finite elements of $E$ will then be less than or equal to $\sup E$, and $\sup E \ge -\infty$.
+	
+	Since $-x \le \sup(\{-y: y \in E\})$ for all $x \in E$, all elements of $E$ are greater than or equal to $-\sup(\{-y: y \in E\}) = \inf(E)$.
+	
+	\bigskip
+	\noindent (b) When $E \subseteq \mathbf{R}$, $E$ is non-empty and has an upper bound in $\mathbf{R}$, E is non-empty but has no upper bound in $\mathbf{R}$, or $E$ is empty. In the first case, $\sup E \in \mathbf{R}$, and $-\infty$ is not an upper bound for $E$, since $E$ is not empty.
+	Also, $+\infty$ would be greater than $\sup E$. In the second case, $-\infty$ is not an upper bound for $E$ and $+\infty = \sup E$. In the last case, $-\infty = \sup E$ and $+\infty > \sup E$. Therefore, $\sup E \le M$ for any $M$ that is an upper bound for $E$, since it is true both when we restrict $M$ to be $+\infty$ or $-\infty$ and when $M$ is forced to be real (Definition 5.5.10).
+	
+	If $+\infty \in E$, only $+\infty$ is an upper bound for $E$, so $\sup E = +\infty = M$.
+	
+	If $-\infty \in E$ but $+\infty \notin E$, $-\infty$ is not both an upper bound for $E$ and less than $\sup E$, from the case for when $E \subseteq \mathbf{R}$ applied to $E \backslash \{-\infty\}$.
+	
+	(c) We know that $\inf(E) = -\sup(\{-x: x \in E\})$. Since $-M$ is an upper bound for $\{-x: x \in E\}$, $\sup(\{-x: x \in E\}) \le -M$ from part (b). Therefore, $\inf(E) \ge M$.
+	
 \end{document}
