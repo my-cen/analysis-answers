@@ -781,4 +781,12 @@
 	
 	Let $S$ be the set $\{a_n: n \ge m\}$. Then, $x = \sup(S)$ and $a_n \in S$ for any natural number $n \ge m$. Therefore, Theorem 6.2.11(a) tells us that $a_n \le x$ for all $n \ge m$. When $M \in \mathbf{R}^*$ is an upper bound for $(a_n)_{n = m}^\infty$, $M$ is also an upper bound for $S$. Hence, Theorem 6.2.11(b) implies that $x \le M$. For every extended real number $y$ for which $y < x$, there exists at least one $n \ge m$ such that $y < a_n \le x$ because otherwise $y$ would be an upper bound for $S$ lower than $x$, which is impossible.
 	
+	\subsection*{Exercise 6.3.4}
+	
+	The sequence $(x^n)_{n = 1}^\infty$ does not converge if $x > 1$. Therefore, we cannot use our trick with $xL = L$. In fact, by Theorem 6.1.19(b), Proposition 6.3.10, and $(\frac{1}{x})^n x^n = 1$, the sequence $(x^n)_{n = 1}^\infty$ converging would imply
+	\[1 = \lim_{n \to \infty} 1 = \lim_{n \to \infty} \left(\frac{1}{x} \right)^n \lim_{n \to \infty} (x^n) = 0 \cdot \lim_{n \to \infty} (x^n) = 0.\]
+	We know that $1 \ne 0$, so $(x^n)_{n = 1}^\infty$ diverges when $x > 1$.
+	
+	In Example 1.2.3, we assumed implicitly that $L = \lim_{n \to \infty} x^n$ existed. Hence, when we made the absurd conclusion that $x = 1$ or $L = 0$, we were actually concluding that $x = 1$ or $L = 0$ when $L$ is well-defined.
+	
 \end{document}
