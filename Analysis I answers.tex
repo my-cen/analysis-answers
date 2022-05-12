@@ -14,98 +14,98 @@
 \begin{document}
 	\maketitle
 	\tableofcontents
-	
+
 	\chapter{Introduction}
-	
+
 	\section{What is analysis?}
-	
+
 	N/A
-	
+
 	\section{Why do analysis?}
-	
+
 	N/A
-	
+
 	\chapter{Starting at the beginning: the natural numbers}
-	
+
 	\section{The Peano axioms}
-	
+
 	N/A
-	
+
 	\section{Addition}
-	
+
 	\subsection*{Exercise 2.2.1}
-	
+
 	We shall use induction on $a$, fixing $b$ and $c$. First, we shall prove the base case. If $a = 0$, $a + b = 0 + b = b$ by the definition of addition of natural numbers  (Definition 2.2.1). Therefore, $(a + b) + c = b + c$. Also by Definition 2.2.1, $a + (b + c) = 0 + (b + c) = b + c$. We now have $(a + b) + c = b + c = a + (b + c)$.
-	
+
 	Now suppose that $(a + b) + c = a + (b + c)$. We then have, by Definition 2.2.1, that $((a\increment) + b) + c = ((a + b)\increment) + c = ((a + b) + c)\increment = (a + (b + c))\increment$. Because of Definition 2.2.1 again, $(a + (b + c))\increment = (a\increment) + (b + c)$. Now we have $((a\increment) + b) + c = (a\increment) + (b + c)$, which closes the induction.
-	
+
 	\subsection*{Exercise 2.2.2}
-	
+
 	We shall use induction on $a$. The base case is vacuously true since $0$ is not positive. For the inductive step, we have to show that $a \increment$ being positive implies that $a\increment = b\increment$ for exactly one natural number $b$ if $a$ being positive implies that $a = c\increment$ for exactly one natural number $c$. But $a$ is equal to $b$ if $a \increment$ is equal to $b \increment$, by Axiom 2.4. This closes the induction.
-	
+
 	\subsection*{Exercise 2.2.3}
-	
+
 	\noindent (a) By Lemma 2.2.2, $a = a + 0$, so $a \ge a$.
-	
+
 	\bigskip
 	\noindent (b) Because $a \ge b$ and $b \ge c$, $a = b + n$ and $b = c + m$ for some $n$ and $m$. Therefore, $a = b + n = (c + m) + n$. By Proposition 2.2.5, $(c + m) + n = c + (m + n)$, so $a = c + (m + n)$. $n + m$ is a natural number, so $a \ge c$.
-	
+
 	\bigskip
 	\noindent (c) Because $a \ge b$ and $b \ge a$, $a = b + n$ and $b = a + m$. Therefore, $a = b + n = (a + m) + n$. By Proposition 2.2.5, $(a + m) + n = a + (m + n)$. Now we have $a = a + (m + n)$. By Lemma 2.2.2, $a = a + 0$, so we can use Proposition 2.2.6 to get $0 = m + n$. Using Corollary 2.2.9, we can deduce that $n$ and $m$ are both equal to $0$. Therefore, $a = b$.
-	
+
 	\bigskip
 	\noindent (d) If $a \ge b$, $a = b + d$ for some $d$. Because of this, $a + c = (b + d) + c$. By Propositions 2.2.4 and 2.2.5, $(b + d) + c = b + (d + c) = b + (c + d) = (b + c) + d$. Therefore, $a + c \ge b + c$.
-	
+
 	Conversely, if $a + c \ge b + c$, $a + c = (b + c) + d$ for some $d$. By Propositions 2.2.4 and 2.2.5, $(b + c) + d = b + (c + d) + b + (d + c) = (b + d) + c$. Using Proposition 2.2.6, we get $a = b + d$, and therefore, $a \ge b$.
-	
+
 	\bigskip
 	\noindent (f) If $a < b$, $b = a + c$ for some $c$, and $b \ne a$. Therefore, $c$ is positive, because otherwise $b = a + 0 = a$. ($a + 0 = a$ because of Lemma 2.2.2.)
-	
+
 	Conversely, if $b = a + c$ for some positive number $c$, we know that $a \le b$. If $a = b$, $a = a + c$. By Lemma 2.2.2, $a = a + 0$, so $a + 0 = a + c$. We can use Proposition 2.2.6 to get $0 = c$, but $c$ is positive. Therefore, $a \ne b$, and combined with $a \le b$, we get $a < b$.
-	
+
 	\bigskip
 	\noindent (e) We first prove that $a < b$ implies that $a \increment \le b$. By (f), $b = a + c$ for some positive $c$. By Lemma 2.2.10, exactly one $d$ exists such that $d \increment = c$. Therefore, $b = a + d \increment$. By Lemma 2.2.3 and Definition 2.2.1, $b = a + d \increment = (a + d) \increment = (a \increment) + d$. Therefore, $a \increment \le b$.
-	
+
 	Conversely, if $a \increment \le b$, we need to prove that $a < b$. Since $a \increment = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \increment \le a$, and we get, from (c), that $a \increment = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
-	
+
 	\subsection*{Exercise 2.2.6 (unfinished)}
-	
+
 	We use induction on $n$. When $n = 0$, $m \le n$ implies that $0 = m + a$. But by Corollary 2.2.9, $m = 0 = n$, so $P(n)$ being true implies that $P(m)$ is true.
-	
+
 	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $b \le n \increment$, $n \increment = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \increment = b + d \increment$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \increment$ implies that $b \le n$ or $n \increment = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \increment = (n + 0) \increment = n + 0 \increment = n + 1$. Since $P(n \increment)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
-	
+
 	\section{Multiplication}
-	
+
 	\subsection*{Exercise 2.3.1}
-	
+
 	First, we prove that $n \cdot 0 = 0$. We induct on $n$. When $n = 0$, $n \cdot 0 = 0 \cdot 0 = 0$, because of Definition 2.3.1. For the inductive hypothesis, we assume $n \cdot 0 = 0$. Then we need to prove that $n \increment \cdot 0 = 0$. By Definition 2.3.1, $n \increment \cdot 0 = n \cdot 0 + 0 = n \cdot 0$. But we already know that $n \cdot 0 = 0$, so $n \increment \cdot 0 = 0$. This closes the induction.
-	
+
 	Next, we prove that $n \cdot m \increment = nm + n$ using induction on $n$. When $n = 0$, $0 \cdot m \increment = 0 = 0 \cdot m + 0$. Now, if $n \cdot m \increment = nm + n$, we need to prove that $n \increment \cdot m \increment = n \increment \cdot m + n \increment$. We can deduce from $n \cdot m \increment = nm + n$ that $n \increment \cdot m \increment = (n \cdot m \increment) + m \increment = nm + n + m \increment = nm + (n + m) \increment = nm + n \increment \, + m = (n \increment) \cdot m + n \increment$. This closes the induction.
-	
+
 	Now we can prove that $nm = mn$. We induct on $m$. When $m = 0$, we have $n \cdot 0 = 0 = 0 \cdot n$. For the inductive hypothesis, we assume $nm = mn$. Now we need to prove $n \cdot m \increment = m \increment \cdot n$. We know that $n \cdot m \increment = nm + n$ and $m \increment \cdot n = mn + n$. But $nm = mn$, so $n \cdot m \increment = m \increment \cdot n$. This closes the induction.
-	
+
 	\subsection*{Exercise 2.3.4}
-	
+
 	By Proposition 3.4, $(a + b)^2 = (a + b)  \cdot (a + b) = (a + b) \cdot a + (a + b) \cdot b = a \cdot a + b \cdot a + a \cdot b + b \cdot b$. We can rewrite $b \cdot a + a \cdot b$ as $a \cdot b + a \cdot b$ because of Lemma 2.3.2. We can further rewrite this as $2ab$ because $2(ab) = 1(ab) + ab = 0(ab) + ab + ab = 0 + ab + ab = ab + ab$. We can also rewrite $a \cdot a$ and $b \cdot b$ as $a^2$ and $b^2$ respectively. Therefore, $(a + b)^2 = a^2 + 2ab + b^2$.
-	
+
 	\chapter{Set theory}
-	
+
 	\section{Fundamentals}
-	
+
 	\subsection*{Exercise 3.3.1}
-	
+
 	We know that at least one of the statements ``$a = c$'' and ``$a = d$'' is true since $\{a, b\} = \{c, d\}$. Similarly, at least one of the statements ``$b = c$'' and ``$b = d$'' is true. If we have that $a = c$ and $b = d$ at the same time, then we have proved what we want. (Same for $a = d$ and $b = c$ at the same time.) Otherwise, then we must have that $a = c = b$ or $a = d = b$. If both of these are true, then $a = b = c = d$, and therefore both $a = c$ and $b = d$. If only one of these is true, which we will assume to be the statement that $a = c = b$ as a similar argument holds assuming $a = d = b$, then $d \notin \{a, b\} = \{a, a\}$, while $d \in \{c, d\} = \{a, d\}$, so $\{a, b\} \ne \{c, d\}$, a contradiction. Therefore, if $\{a, b\} = \{c, d\}$, either both $a = c$ and $b = d$ or $a = d$ and $b = c$.
-	
+
 	\subsection*{Exercise 3.3.2}
-	
+
 	First, we show that these four sets exist. Axiom 3.3 tells us that $\emptyset$ exists. The singleton set axiom (part of Axiom 3.4) and Axiom 3.1 (so that we are allowed to construct the singleton set whose element is another set) tell us that $\{\emptyset\}$ exists. Applying them again gives that $\{\{\emptyset\}\}$ exists. Using the pair set axiom (also part of Axiom 3.4) and Axiom 3.1 allows us to create the set $\{\emptyset, \{\emptyset\}\}$.
-	
+
 	Now we show that these four sets are distinct. Since the sets $\{\emptyset\}$, $\{\{\emptyset\}\}$, and $\{\emptyset, \{\emptyset\}\}$ obviously all contain at least one element, if one of them is equal to $\emptyset$, then by Axiom 3.2, it contains no elements. But this contradicts that it has at least one element, and we have a contradiction. Now we need to prove that $\{\emptyset\}$ is not equal to $\{\{\emptyset\}\}$ or $\{\emptyset, \{\emptyset\}\}$. Both $\{\emptyset\} \in \{\{\emptyset\}\}$ and $\{\emptyset, \{\emptyset\}\}$ are true, but $\{\emptyset\} \notin \{\emptyset\}$. Therefore, by Axiom 3.2, $\{\emptyset\}$ is not equal to any of the other sets. (We have already proved that $\emptyset \ne \{\emptyset\}$, so $\{\emptyset\} \ne \emptyset$). The last thing that we need to prove now is that $\{\{\emptyset\}\} \ne \{\emptyset, \{\emptyset\}\}$. Since $\emptyset \in \{\emptyset, \{\emptyset\}\}$ and $\emptyset \notin \{\{\emptyset\}\}$, by Axiom 3.2, these two sets are not equal. Therefore, all four sets are distinct.
-	
+
 	\subsection*{Exercise 3.1.3}
-	
+
 	\paragraph*{Proving that $\{a, b\} = \{a\} \cup \{b\}$}
-	
+
 	We shall prove that $\{a, b\} = \{a\} \cup \{b\}$. The following are equivalent:
 	\begin{itemize}
 		\item $c \in \{a, b\}$
@@ -114,13 +114,13 @@
 		\item $c \in \{a\} \cup \{b\}$
 	\end{itemize}
 	Therefore, $\{a, b\} = \{a\} \cup \{b\}$.
-	
+
 	\paragraph*{Proving that $A \cup B = B \cup A$}
-	
+
 	We now shall prove that $A \cup B = B \cup A$. If $c \in A \cup B$, then at least one of the statements $c \in A$ and $c \in B$ are true. By Axiom 3.5, this means that $c \in B \cup A$. We can replace $A$ with $B$ and $B$ with $A$ to show the other direction. Therefore, $A \cup B = B \cup A$.
-	
+
 	\paragraph*{Proving that $A \cup A = A \cup \emptyset = \emptyset \cup A = A$}
-	
+
 	Because it is impossible for $c$ to be in $\emptyset$, the following are equivalent:
 	\begin{itemize}
 		\item $c \in A$ or $c \in A$
@@ -129,196 +129,196 @@
 		\item $c \in A$
 	\end{itemize}
 	These four statements are equivalent to $c \in A \cup A$, $c \in A \cup \emptyset$, $c \in \emptyset cup A$, and $c \in A$, respectively. Therefore, $A \cup A = A \cup \emptyset = \emptyset \cup A = A$.
-	
+
 	\subsection*{Exercise 3.1.11}
-	
+
 	The next paragraph will be written like a proof of Axiom 3.6 from Axiom 3.7: we will not define again $A$, $P(x)$, and so on.
-	
+
 	If $Q(x, y)$ is the statement that $x = y$ and $P(x)$ are both true, then by Axiom 3.7 and the fact that for each $x$ there exists at most one $y$ such that $Q(x, y)$, there exists a set $B = \{y: x = y \text{ and } P(x) \text{ for some } x \in A\}$. For any $z \in B$, we know that $z \in A$ and that $P(z)$ is true. For any $x \in A$ such that $P(x)$ is true, we similarly know that $z \in B$. Therefore, $A = B$.
-	
+
 	\section{Russell's paradox (Optional)}
-	
+
 	\subsection*{Exercise 3.2.1}
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.3}
-	
+
 	We can create a property $P(x)$ that is always false regardless to the choice of $x$. Then the set $\{x: P(x) \text{ is true}\}$ has no elements, as $P(x)$ is false all the time.
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.4}
-	
+
 	If $P(x)$ is the property that $x = a$, then $\{x: P(x) \text{ is true}\}$ has only the element $a$. Similarly, if $Q(x)$ is the property that $x = a$ or $x = b$, then $\{x: Q(x) \text{ is true}\}$ has only the elements $a$ and $b$.
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.5}
-	
+
 	If $P(x)$ is the property that $x \in A$ or $x \in B$, then $\{x: P(x) \text{ is true}\}$ exists, so $A \cup B$ exists.
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.6}
-	
+
 	If $Q(x)$ is the property that $P(x)$ is true and $x \in A$, then $\{x: Q(x) \text{ is true}\} = \{x \in A: P(x)\}$ exists.
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.7}
-	
+
 	If $Q(y)$ is the property that there exists some $x$ such that $P(x, y)$ is true, then $\{y: Q(y) \text{ is true}\} = \{y: P(x, y) \text{ is true for some } x \in A\}$ exists.
-	
+
 	\paragraph*{Proving that Axiom 3.9 implies Axiom 3.8, assuming that all natural numbers are objects}
-	
+
 	If $P(x)$ is the property that $x$ is a natural number, then $\mathbf{N} = \{x: P(x) \text{ is true}\}$ exists, by Axiom 3.9.
-	
+
 	\section{Functions}
-	
+
 	\subsection*{Exercise 3.3.2}
-	
+
 	\paragraph*{Proving that $f$ and $g$ being injective implies that $g \circ f$ is too}
-	
+
 	We will show that if $x \ne x'$, then $(g \circ f)(x) \ne (g \circ f)(x')$. First, since $f$ is injective, $f(x) \ne f(x')$. Since $g$ is also injective, $g(f(x)) \ne g(f(x'))$. Therefore, $(g \circ f)(x) \ne (g \circ f)(x')$.
-	
+
 	\paragraph*{Proving that $f$ and $g$ being surjective implies that $g \circ f$ is too}
-	
+
 	We will show that $g \circ f$ is surjective by showing that for any $c \in Z$, there exists some $a \in X$ such that $(g \circ f)(a) = c$. Since $g$ is surjective, there exists some $b \in Y$ such that $g(b) = c$. Because $f$ is also surjective, there exists some $a \in X$ such that $f(a) = b$. Therefore, $(g \circ f)(a) = c$, and $g \circ f$ is surjective.
-	
+
 	\subsection*{Exercise 3.3.3}
-	
+
 	\paragraph*{Finding when the empty function is injective}
-	
+
 	We will prove that the empty function $f \colon \emptyset \rightarrow X$ is injective for any $X$. Since we cannot find any $x, x' \in \emptyset$ that are unequal, the empty function is (vacuously) injective.
-	
+
 	\paragraph*{Finding when the empty function is surjective}
-	
+
 	We will prove that the empty function $f \colon \emptyset \rightarrow X$ is surjective only when $X = \emptyset$. The statement
 	\begin{center}
 		``For every $y \in X$, there exists $x \in \emptyset$ such that $f(x) = y$''
 	\end{center}
 	can only be true when it is impossible that $y \in X$, because $x \in \emptyset$ is impossible. But then we have that $X = \emptyset$, and we have proved our claim.
-	
+
 	\paragraph*{Finding when the empty function is bijective}
-	
+
 	We will prove that the empty function $f \colon \emptyset \rightarrow X$ is bijective only when $X = \emptyset$. Since $f$ is always injective regardless of the choice of $X$, the empty function being bijective is equivalent to it being surjective. Therefore, since $f$ is surjective precisely when $X = \emptyset$, the empty function is bijective only when $X = \emptyset$.
-	
+
 	\subsection*{Exercise 3.3.4}
-	
+
 	\paragraph*{Showing that if $g \circ f = g \circ \tilde{f}$ and $g$ is injective, then $f = \tilde{f}$}
-	
+
 	We will use proof by contradiction. If $f \ne \tilde{f}$, then for some $x \in X$, we have $f(x) \ne \tilde{f}(x)$. Therefore, since $g$ is injective, $(g \circ f)(x) \ne (g \circ \tilde{f})(x)$, and $g \circ f \ne g \circ \tilde{f}$. This is a contradiction, and therefore, $f = \tilde{f}$. This statement is not necessarily true if $g$ is not injective. If $X = Y = Z = \mathbf{N}$, $f(x) = 0$, $\tilde{f}(x) = 1$, and $g(x) = 0$, then $f \ne \tilde{f}$, while $(g \circ f)(x) = 0 = (g \circ \tilde{f})(x)$.
-	
+
 	\paragraph*{Showing that if $g \circ f = \tilde{g} \circ f$ and $f$ is surjective, then $g = \tilde{g}$}
-	
+
 	We will use proof by contradiction again. If $g \ne \tilde{g}$, then for some $y \in Y$, we have $g(y) \ne \tilde{g}(y)$. Since $f$ is surjective, there exists $x \in X$ such that $f(x) = y$. But then $(g \circ f)(x) \ne (\tilde{g} \circ f)(x)$. This is a contradiction, and therefore, $g = \tilde{g}$. This statement is not necessarily true if $f$ is not surjective. If $X = Y = Z = \mathbf{N}$, $f(x) = 0$, $g(x) = x$, and $\tilde{g}(x) = 0$, then $g \ne \tilde{g}$, even though $(g \circ f)(x) = 0 = (\tilde{g} \circ f)(x)$.
-	
+
 	\subsection*{Exercise 3.3.6}
-	
+
 	If $f(x) = a$, then by the definition of $f^{-1}$, $f^{-1}(f(x)) = f^{-1}(a) = x$. If $f^{-1}(y) = b$, then $f(b) = y$, so $f(f^{-1}(y)) = f(b) = y$.
-	
+
 	We can deduce that $f^{-1}$ is bijective from Exercise 3.3.5 and the fact that the identity map $\imath_{X \rightarrow X}$ defined as $\imath_{X \rightarrow X}(x) = x$ for all $x \in X$ is obviously bijective.
-	
+
 	\subsection*{Exercise 3.3.7}
-	
+
 	By Exercise 3.3.2, $g \circ f$ is both injective and surjective, and is therefore bijective. The only thing left we have to prove is that $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = x$. But $(f^{-1} \circ g^{-1} \circ g \circ f)(x) = (f^{-1} \circ f)(x) = x$, and we have proved what we want.
-	
+
 	\section{Images and inverse images}
-	
+
 	\subsection*{Challenge to define $f(S)$ using the axiom of specification}
-	
+
 	We can define $f(S) \coloneqq \{y \in Y: \text{there exists } x \in S \text{ such that } f(x) = y\}$.
-	
+
 	\subsection*{Exercise 3.4.1}
-	
+
 	First, we will show that any element of the forward image of $V$ under $f^{-1}$ is contained in the inverse image of $V$ under $f$. If $x$ is in the forward image of $V$ under $f^{-1}$, then there exists $v$ such that $f^{-1}(v) = x$ and therefore $f(x) = v$. But then $x$ is in the inverse image of $V$ under $f$.
-	
+
 	Next, we will show that any element $v$ of the inverse image of $V$ under $f$ is contained in the forward image of $V$ under $f^{-1}$. Since there exists $x$ such that $f(x) = v$ and therefore $f^{-1}(v) = x$, $x$ is in the forward image of $V$ under $f$.
-	
+
 	Finally, we have that the forward image of $V$ under $f^{-1}$ is equal to the inverse image of $V$ under $f$, and that it is valid to use the notation $f^{-1}(V)$.
-	
+
 	\subsection*{Exercise 3.4.6}
-	
+
 	By Axiom 3.11, $\{0, 1\}^X$ exists. We can use Axiom 3.7 (the axiom of replacement) to create a set \[Y = \{f^{-1}(\{1\}): f \in \{0, 1\}^X\}.\] Every $S$ which is a subset of $X$ is in $Y$, because defining $f(x)$ to be $1$ when $x$ is in $S$ and to be $0$ otherwise means that $f^{-1}(\{1\}) = S$. Every element of $Y$ is a subset of $X$, because every element of $f^{-1}(\{1\})$ has to be in $X$.
-	
+
 	\subsection*{Exercise 3.4.9}
-	
+
 	We will show that \[\{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\} = \{x \in A_{\beta'}: x \in A_\alpha \text{ for all } \alpha \in I\}.\] We know that $y \in \{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\}$ if and only if $y \in A_\beta$ and $y \in A_\alpha$ for all $\alpha \in I$. But the latter statement implies the former, so $y \in \{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\}$ if and only if $y \in A_\alpha$ for all $\alpha \in I$.
-	
+
 	We can do something similar for $A_{\beta'}$. Therefore, \[\{x \in A_\beta: x \in A_\alpha \text{ for all } \alpha \in I\} = \{x \in A_{\beta'}: x \in A_\alpha \text{ for all } \alpha \in I\}.\]
-	
+
 	\section{Cartesian products}
-	
+
 	\subsection*{Exercise 3.5.1}
-	
+
 	First, we will show that $(x, y) = (x', y')$ implies that both $x = x'$ and $y = y'$. Since $(x, y) \coloneqq \{\{x\}, \{x, y\}\}$, we have to show that $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$ implies that both $x = x'$ and $y = y'$. If $\{\{x\}, \{x, y\}\} = \{\{x'\}, \{x', y'\}\}$, then $\{x\} \in \{\{x'\}, \{x', y'\}\}$. In order for this to be true, we must have $\{x\} = \{x'\}$, which implies $x = x'$, or $\{x\} = \{x', y'\}$, which implies $x' = y' = x$. But the latter case implies the former case, so we can ignore the latter one. Doing the same with $\{x, y\}$, $\{x'\}$, and $\{x', y'\}$ yields that $x = x'$ and $y = y'$. The converse is true by Axiom 3.2.
-	
+
 	We can show that $X \times Y$ is a set if $X$ and $Y$ are both sets using Axiom 3.1 (sets are objects), Axiom 3.7 (axiom of replacement), and Axiom 3.12 (axiom of union). By Axioms 3.1 and 3.7, we can create the set $Z = \{\{(x, y)\}: y \in Y\}: x \in X\}$. By Axiom 3.12, we can also create the set $\bigcup Z$, which we can define to be $X \times Y$.
-	
+
 	I won't do the additional challenge.
-	
+
 	\subsection*{Exercise 3.5.6}
-	
+
 	We will show that if $A \times B \subseteq C \times D$ and $A, B, C, D \ne \emptyset$, then $A \subseteq C$ and $B \subseteq D$. Since $A$ and $B$ are nonempty, by the single choice lemma (Lemma 3.1.5), there exist some $a \in A$ and $b \in B$. Now, for any $x \in A$, since $(x, b) \in A \times B \subseteq C \times D$, we have $x \in C$. Similarly, for any $y \in B$, since $(a, y) \in A \times B \subseteq C \times D$, we have $y \in D$. Therefore, $A \subseteq C$ and $B \subseteq D$.
-	
+
 	However, we can show that if we remove the assumption that $A$, $B$, $C$, and $D$ are nonempty, then this statement is false. If $A = \{0\}$, $C = \{1\}$, and $B = D = \emptyset$, then $A \times B$ is empty, as there are no elements of $B$. Similarly, $C \times D = \emptyset$, and therefore $A \times B \subseteq C \times D$. However, $A \not \subseteq C$.
-	
+
 	If $A \subseteq C$ and $B \subseteq D$, all ordered pairs $(a, b)$ where $a \in A$ and $b \in B$ are in $C \times D$ because $a \in C$ and $b \in D$. Hence, $A \times B \subseteq C \times D$. This statement holds even when $A$, $B$, $C$, and $D$ are not all nonempty.
-	
+
 	Assuming that $A \times B = C \times D$ and $A, B, C, D \ne \emptyset$, $A = C$ and $B = D$. This is because $A \times B \subseteq C \times D$ and $C \times D \supseteq A \times B$, and therefore $A \subseteq C$, $A \supseteq C$, $B \subseteq D$, and $B \supseteq D$.
-	
+
 	If we remove the assumption that $A, B, C, D \ne \emptyset$, the statement is false. The counterexample from before ($A = \{0\}$, $C = \{1\}$, $B = D = \emptyset$) also works here. We have that $A \times B = C \times D = \emptyset$, but $A \ne C$.
-	
+
 	We have that $A = C$ and $B = D$ imply that $A \times B = C \times D$ because $A \subseteq C$ and $B \subseteq D$ imply, together, that $A \times B \subseteq C \times D$ and the same with $\subseteq$ replaced by $\supseteq$.
-	
+
 	\subsection*{Exercise 3.5.13 (unfinished)}
-	
+
 	?
-	
+
 	\section{Cardinality of sets}
-	
+
 	\subsection*{Exercise 3.6.2}
-	
+
 	If $X$ has cardinality $0$, there exists a bijection $f \colon X \rightarrow \{i \in \mathbf{N}: 1 \le i \le 0\}$. The set $\{i \in \mathbf{N}: 1 \le i \le 0\}$ is obviously empty. If $X \ne \emptyset$, then there exists some $x \in X$. But then $f(x)$ is in $\emptyset$, and therefore $X$ must be empty.
-	
+
 	If $X$ is empty, the function $f \colon X \rightarrow \emptyset$ exists (we don't need to give how to derive $f(x)$ given $x$, since $x \in X$ is impossible) and is a bijection (injectivity is because there are no elements in the domain at all, and surjectivity is from that the range is empty). Since $\emptyset = \{i \in \mathbf{N}: 1 \le i \le 0\}$, $X$ has cardinality $0$.
-	
+
 	\subsection*{Exercise 3.6.3}
-	
+
 	We will induct on $n$. When $n = 0$, $\{i \in N: 1 \le i \le n\}$ is empty, so we can make $M$ equal to any natural number, say, $0$. Now, assuming that all $f \colon \{i \in N: 1 \le i \le n\} \rightarrow \mathbf{N}$ satisfy the property that there exists some natural number $M$ such that $f(i) \le M$ for all $1 \le i \le n$, we will now show that for every $g \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$, there exists some natural number $a$ such that $g(i) \le a$ for all $1 \le i \le n \increment$. If $h \colon \{i \in N: 1 \le i \le n \increment\} \rightarrow \mathbf{N}$ is defined so that $h(x) \coloneqq g(x)$ for all $x \in \{i \in N: 1 \le i \le n \increment\}$, there exists some $b$ such that $h(i) \le b$ for all $1 \le i \le n$. Defining $a \coloneqq \begin{cases}
 		b & \text{if } g(n \increment) \le b \\
 		g(n \increment) & \text{if } g(n \increment) > b
 	\end{cases}$ ensures that $a$ will always be greater than or equal to all elements of $g(\{i \in N: 1 \le i \le n \increment\})$.
-	
+
 	\subsection*{Exercise 3.6.5}
-	
+
 	We will define $f \colon A \times B \rightarrow B \times A$ by $f(a, b) \coloneqq (b, a)$, where $a \in A$ and $b \in B$. Injectivity of $f$ comes from $(b, a) = (d, c)$ implying that $b = d$ and $a = c$, further implying that $(a, b) = (c, d)$. Surjectivity comes from the fact that for every $(b, a) \in B \times A$ has a corresponding ordered pair (namely, $(a, b)$) in $A \times B$ where $f(a, b) = (b, a)$.
-	
+
 	Now, we will prove that $ab = ba$. We will define $A$ as $\{i \in \mathbf{N}: 1 \le i \le a\}$ and $B$ as $\{j \in \mathbf{N}: 1 \le j \le b\}$. Since $A$ has equal cardinality with itself and the same for $B$ (Proposition 3.6.4), $A$ and $B$ are both finite and have the cardinalities $a$ and $b$, respectively. By Proposition 3.6.14(e), $\#(A) \cdot \#(B) = \#(A \times B)$ and $\#(B) \cdot \#(A) = \#(B \times A)$. We also know that $\#(A \times B) = \#(B \times A)$, and therefore $ab = ba$.
-	
+
 	\subsection*{Exercise 3.6.7 (unfinished)}
-	
+
 	?
-	
+
 	\subsection*{Exercise 3.6.10 (unfinished)}
-	
+
 	\paragraph*{Attempt 1}
-	
+
 	We induct on $n$. (\emph{I don't think we can induct, actually, since} $\#(\bigcup_{i \in \{1, \dotsc, n + 1\}} A_i) > n + 1$ \emph{does not necessarily imply} $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) > n$). When $n = 0$, $\#(\bigcup_{i \in \{1, \dotsc, n\}} A_i) = \#(\emptyset) = 0$. It is obvious that $0 \not > 0$, so the pigeonhole principle holds vacuously when $n = 0$. When the pigeonhole principle is true for $n$ finite sets, now we will show that it also is true for $A_1, \dotsc, A_{n \increment}$. By Proposition 3.6.14(b), \[\#(\smashoperator{\bigcup_{i \in \{1, \dotsc, n \increment\}}} A_i) \le \#(\smashoperator{\bigcup_{i \in \{1, \dotsc, n\}}} A_i) + \#(A_{n \increment}).\]
-	
+
 	\chapter{Integers and rationals}
-	
+
 	\section{The integers}
-	
+
 	\subsection*{Exercise 4.1.1}
-	
+
 	\paragraph*{Reflexive}
-	
+
 	If $a, b \in \mathbf{N}$, $a + b = b + a$, so by Definition 4.1.1, $a \formalminus b = a \formalminus b$.
-	
+
 	\paragraph*{Symmetric}
-	
+
 	If $a \formalminus b = c \formalminus d$, $a + d = c + b$. Now, since $c + b = a + d$, $c \formalminus d = a \formalminus b$.
-	
+
 	\subsection*{Exercise 4.1.3}
-	
+
 	We know that $-1 = -(1 \formalminus 0) = 0 \formalminus 1$. If $a = a_1 \formalminus a_2$, $(-1) \cdot a = (0 \cdot a_1 + 1 \cdot a_2) \formalminus (0 \cdot a_2 + 1 \cdot a_1) = a_2 \formalminus a_1 = -a$.
-	
+
 	\subsection*{Exercise 4.1.4}
-	
+
 	I will write $x = a \formalminus b$, $y = c \formalminus d$, and $z = e \formalminus f$, where $a, b, c, d, e, f \in \mathbf{N}$.
-	
+
 	First, we will prove $x + y = y + x$:
 	\begin{align*}
 		x + y &= (a \formalminus b) + (c \formalminus d) \\
@@ -327,7 +327,7 @@
 		&= (c + a) \formalminus (d + b)
 	\end{align*}
 	and therefore, because of natural number addition's commutativity, $x + y = y + x$.
-	
+
 	Next, we will prove that $(x + y) + z = x + (y + z)$:
 	\begin{align*}
 		(x + y) + z &= ((a \formalminus b) + (c \formalminus d)) + (e \formalminus f) \\
@@ -338,14 +338,14 @@
 		&= (a + (c + e)) \formalminus (b + (d + f))
 	\end{align*}
 	and therefore, because of natural number addition's associativity, $(x + y) + z = x + (y + z)$.
-	
+
 	Now, we will prove that $x + 0 = 0 + x = x$. We have proved above that $x + y = y + x$ and therefore $x + 0 = 0 + x$, so we only need to show $x + 0 = x$:
 	\[\begin{split}
 		x + 0 &= (a \formalminus b) + (0 \formalminus 0) \\
 		&= (a + 0) \formalminus (b + 0).
 	\end{split}\]
 	We know that $a + 0 = a$ and $b + 0 = b$, so $x + 0 = x$, and hence $x + 0 = 0 + x = x$.
-	
+
 	Next, we will prove that $x + (-x) = (-x) + x = 0$. We have already proved that $x + y = y + x$ and therefore $x + (-x) = (-x) + x$, so the only thing left is to show $x + (-x) = 0$.
 	\[\begin{split}
 		x + (-x) &= (a \formalminus b) + (b \formalminus a) \\
@@ -355,7 +355,7 @@
 		&= 0.
 	\end{split}\]
 	Therefore, $x + (-x) = (-x) + x = 0$.
-	
+
 	To show that $xy = yx$, we will use the definition of integer multiplication:
 	\begin{align*}
 		xy &= (a \formalminus b)(c \formalminus d) \\
@@ -365,9 +365,9 @@
 		&= (ac + bd) \formalminus (ad + bc) \\
 		&= xy.
 	\end{align*}
-	
+
 	\emph{Note that} $(xy)z = x(yz)$ \emph{was proved in in the section about proving Proposition 4.1.6 on page 4.1.}
-	
+
 	For the statement $x1 = 1x = x$, we only have to prove that $1x = x$, because we have already proved that $xy = yx$ earlier:
 	\[\begin{split}
 		1x &= (1 \formalminus 0) \cdot (a \formalminus b) \\
@@ -375,7 +375,7 @@
 		&= a \formalminus b \\
 		&= x.
 	\end{split}\]
-	
+
 	Now we will show that $x(y + z) = xy + xz$:
 	\[\begin{split}
 		x(y + z) &= (a \formalminus b)((c \formalminus d) + (e \formalminus f)) \\
@@ -385,60 +385,60 @@
 		&= ((ac + bd) \formalminus (ad + bc)) + ((ae + bf) \formalminus (af + be)) \\
 		&= xy + xz.
 	\end{split}\]
-	
+
 	We can show that $(y + z)x = yx + zx$ using $xy = yx$ and $x(y + z) = xy + xz$ by simply swapping $x(y + z)$ with $(y + z)x$, $xy$ with $yx$, and $xz$ with $zx$.
-	
+
 	\subsection*{Exercise 4.1.7}
-	
+
 	\noindent (a) If $a > b$, we will show that $a - b$ is a positive natural number. Since $a \ge b$, there exists $d \in \mathbf{N}$ such that $a = b + d$. Subtracting $b$ from both sides gives $a - b = (b + d) - b$. We know that \[(b + d) - b = (b + d) + (-b) = (d + b) + (-b) = d + (b + (-b)) = d + 0 = d.\] Therefore, $a - b = d$. Since $d = 0$ implies $a = b + 0 = b$, which contradicts $a > b$, $a - b$ must be a nonzero, or positive, natural number.
-	
+
 	Now we will show that if $a - b$ is a positive natural number, $a > b$. We know that $a \ge b$, since $a = a + (-b) + b = (a - b) + b$. We also know that $a \ne b$ because otherwise, $a - b$ would be $0$. Therefore, $a > b$.
-	
+
 	\bigskip
 	\noindent (b) When $a > b$, by (a), $a - b \ne 0$. Since $c - c = c + (-c) = 0$ (by Proposition 4.1.6 and the definition of subtraction on page 79), $a - b + c - c \ne 0 + c - c = 0$. By Proposition 4.1.6 and the fact that $-(-x) = x$ (if $x = a \formalminus b$, $-x = b \formalminus a$, and $-(-x)$ is just $a \formalminus b$ again),
 	\begin{multline*} a - b + c - c = a + (-b) + c + (-c) \\ = (a + (-c)) + (-b) + (-(-c)) = (a - c) - (b - c). \end{multline*}
 	Therefore, $a + c > b + c$.
-	
+
 	\bigskip
 	\noindent (c) Since $a > b$, $a - b$ is a positive natural number. Since $c$ is also a positive natural number, by Lemma 2.3.3, $(a - b)c$ is also a positive natural number. The distributive law for natural numbers (Proposition 2.3.4) tells us that $(a - b)c = ac - bc$, and therefore $ac > bc$.
-	
+
 	\bigskip
 	\noindent (d) Since $a > b$, $a - b$ is a positive natural number. But this means that $-a < -b$, since $-b = (a - b) + (-a)$.
-	
+
 	\bigskip
 	\noindent (e) Since $a > b$ and $b > c$, $a - b$ and $b - c$ are both positive natural numbers. By Proposition 2.2.8, $(a - b) + (b - c)$ is also a positive natural number. We know that \[(a - b) + (b - c) = a + (-b) + b + (-c) = a + 0 + (-c) = a + (-c) = a.\] Therefore, $a > c$.
-	
+
 	\bigskip
 	\noindent (f) First, we will show that at least one of the statements $a > b$, $a < b$, and $a = b$ is true. By Lemma 4.1.5 (trichotomy of integers), $a - b$ is either zero, positive, or negative. If it is $0$, \[a = (a - b) + b = 0 + b = b.\] If $a - b$ is positive, by part (a), $a > b$. When $a - b$ is negative, it is the negation of some positive natural number $d$. Since $-(-d)$ is equal to $d$ itself and $-(a - b) = b - a$, $d = b - a$. Therefore, $b > a$. We have now proved that at least one of the statements $a > b$, $a < b$, and $a = b$ is true.
-	
+
 	Now, we will show that no two of these statements can be true at the same time. It is obvious from the definition of ordering on the integers (Definition 4.1.10) that $a = b$ cannot be true at the same time as $a > b$ or $a < b$. Now the only thing left is to prove that $a > b$ and $a < b$ cannot both be true. We will prove this using proof by contradiction. The statement that $a > b$ is equivalent to $a - b$ being positive, and $a < b$ is equivalent to $b - a$ being positive. But by Lemma 4.1.5 (the trichotomy of integers) and the fact that $b - a = -(a - b)$ give us a contradiction, as $b - a$ cannot both be positive and negative. We have now proved that exactly one of the statements $a > b$, $a < b$, or $a = b$ is true.
-	
+
 	\subsection*{Exercise 4.1.8}
-	
+
 	If $P(n)$ is the property that $n > -1$, $P(0)$ is true, because $0 = (-1) + 1$ and $0 \ne -1$. Also, if $P(n)$ is true, since $n \increment > n$, by Lemma 4.1.11(e), $P(n \increment)$ is true. However, $P(-1)$ is obviously false, since $-1 = -1$.
-	
+
 	\section{The rationals}
-	
+
 	\subsection*{Exercise 4.2.1}
-	
+
 	\paragraph*{Proving that equality is reflexive (for rational numbers)}
-	
+
 	We know that for any $a, b \in \mathbf{Z}$ where $b \ne 0$, $ab = ab$. Therefore, $a // b = a // b$.
-	
+
 	\paragraph*{Proving that equality is symmetric}
-	
+
 	If for $a, b, c, d \in \mathbf{Z}$ that satisfy $b, d \ne 0$, we have $a // b = c // d$, then $ad = cb$. Hence, $cb = ad$, and $c // d = a // b$.
-	
+
 	\paragraph*{Proving that equality is transitive}
-	
+
 	If $a, b, c, d, e, f \in \mathbf{Z}$ where $b, d, f \ne 0$, $a // b = c // d$, and $c // d = e // f$, then we must have $ad = cb$ and $cf = ed$. Hence, $ad \cdot cf = cb \cdot ed$. By Corollary 4.1.9, we can remove $c$ and $d$ from both sides:
 	\[a \cdot f = b \cdot e.\]
 	Therefore, by Definition 4.2.1, $a // b = e // f$, and we have proved that rational number equality is reflexive, symmetric, and transitive.
-	
+
 	\subsection*{Exercise 4.2.3}
-	
+
 	I will assume that $x = a // b$, $y = c // d$, and $z = e // f$, where $a, b, c, d, e, f \in \mathbf{Z}$ and $b, d, f \ne 0$.
-	
+
 	First, we will prove that $x + y = y + x$:
 	\begin{align*}
 		x + y &= (a // b) + (c // d) \\
@@ -448,9 +448,9 @@
 		&= (ad + bc) // (bd) \\
 		&= x + y.
 	\end{align*}
-	
+
 	\emph{The identity} $(x + y) + z$ \emph{was proved on page 84 already.}
-	
+
 	Next, we will prove that $x + 0 = 0 + x = x$. We have already proved that $x + y = y + x$, so we only need to show that $x + 0 = x$:
 	\[\begin{split}
 		x + 0 &= (a // b) + (0 // 1) \\
@@ -458,7 +458,7 @@
 		&= a // b \\
 		&= x.
 	\end{split}\]
-	
+
 	For the next identity, $x + (-x) = (-x) + x = 0$, we have already shown that $x + y = y + x$, so we only need to prove $x + (-x) + 0$:
 	\[\begin{split}
 		x + (-x) &= (a // b) + ((-a) // b) \\
@@ -467,7 +467,7 @@
 		&= 0.
 	\end{split}\]
 	The last step is valid because $0 \cdot 1 = 0 \cdot (b \cdot b)$.
-	
+
 	Now we prove that $xy = yx$:
 	\begin{align*}
 		xy &= (a // b) \cdot (c // d) \\
@@ -476,7 +476,7 @@
 		&= (ca) // (db) \\
 		&= xy.
 	\end{align*}
-	
+
 	We now prove that $(xy)z = x(yz)$:
 	\begin{align*}
 		(xy)z &= ((a // b) \cdot (c // d)) \cdot (e // f) \\
@@ -487,7 +487,7 @@
 		&= (ace) // (bdf) \\
 		&= (xy)z.
 	\end{align*}
-	
+
 	Next, we prove $x1 = 1x = x$. We have already proved that $xy = yx$, so we only need to prove $x \cdot 1 = x$:
 	\[\begin{split}
 		x \cdot 1 &= (a // b) \cdot (1 // 1) \\
@@ -495,7 +495,7 @@
 		&= a // b \\
 		&= x.
 	\end{split}\]
-	
+
 	The next identity to prove is $x(y + z) = xy + xz$:
 	\begin{align*}
 		x(y + z) &= (a // b)((c // d) + (e // f)) \\
@@ -507,9 +507,9 @@
 		&= (acf + dae) // (bdf) \\
 		&= x(y + z).
 	\end{align*}
-	
+
 	For the identity $(y + z)x = yx + zx$, we can just apply $xy = yx$ and $x(y + z) = xy + xz$ together.
-	
+
 	Finally, we will prove that $xx^{-1} = x^{-1}x = 1$, when $x \ne 0$. We know that $x^{-1}$ exists because otherwise, $a \ne 0$, and therefore $x$ would be $0$. Since $xy = yx$, we only need to show that $xx^{-1} = 1$:
 	\[\begin{split}
 		xx^{-1} &= (a // b)(b // a) \\
@@ -517,14 +517,14 @@
 		&= 1.
 	\end{split}\]
 	(The last step comes from Definition 4.2.1).
-	
+
 	\subsection*{Exercise 4.2.5}
-	
+
 	\noindent (a) By Lemma 4.2.7, we know that exactly one of the statements ``$x - y = 0$'', ``$x - y$ is positive'', or ``$x - y$ is negative'' is true. We now can use Definition 4.2.8 to deduce that exactly one of the statements $x = y$, $x > y$, or $x < y$ is true.
-	
+
 	\bigskip
 	\noindent (b) If $x < y$, $x - y$ must be a negative rational number. Hence, $y - x$ is positive, and $y > x$. Similarly, we can show that $y > x$ implies $x < y$.
-	
+
 	\bigskip
 	\noindent (c) By (b), we know that $y > x$ and $z > y$. Thus, $y - x$ and $z - y$ are positive. If $y - x = a // b$ and $z - y = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is possible by Definition 4.2.6),
 	\[\begin{split}
@@ -532,7 +532,7 @@
 		&= (ad + bc) // (bd)
 	\end{split}\]
 	which is positive, and therefore $z > x$. We now have proved that $x < z$.
-	
+
 	\bigskip
 	\noindent (d) By (b), we know that $y > x$, and hence, $y - x$ is positive. If $y - x = a // b$, we know that
 	\[\begin{split}
@@ -540,7 +540,7 @@
 		&= y - x
 	\end{split}\]
 	and therefore $y + z > x + z$. Hence, $x + z < y + z$.
-	
+
 	\bigskip
 	\noindent (e) Because of part (b), we know that $y > x$, and thus, $y - x$ is positive. Assuming that $y - x = a // b$ and $z = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is possible by Definition 4.2.6),
 	\[\begin{split}
@@ -549,153 +549,153 @@
 		&= (ac) // (bd)
 	\end{split}\]
 	and hence, $yz > xz$ and $xz < yz$.
-	
+
 	\subsection*{Exercise 4.2.6}
-	
+
 	We know that $x - y$ is positive. Assuming that $y - x = a // b$ and $z = c // d$ (where $a$, $b$, $c$, and $d$ are positive; this is always possible by Definition 4.2.6), we have that
 	\[\begin{split}
 		yz - xz &= (y - x)z \\
 		&= (ac) // (bd)
 	\end{split}\]
 	and therefore, $xz > yz$.
-	
+
 	\section{Absolute value and exponentiation}
-	
+
 	\subsection*{Exercise 4.3.3(a)}
-	
+
 	First, we prove that $x^n x^m = x^{n + m}$. We induct on $m$. When $m = 0$, $x^m = 1$, and hence, $x^n x^m = x^n$. But $x^{n + m} = x^{n + 0} = x^n$, and therefore, $x^n x^m = x^{n + m}$ is true when $m = 0$. When $x^n x^m = x^{n + m}$,
 	\[x^n x^{m \increment} = x^n x^m \cdot x = x^{n + m} \cdot x = x^{n + (m \increment)},\]
 	and we have proved that $x^n x^m = x^{n + m}$ for all $n$ and $m$.
-	
+
 	Next, we prove that $(x^n)^m = x^{nm}$, again by induction on $m$. When $m = 0$, it is obvious that both $(x^n)^m$ and $x^{nm}$ are both $1$, since anything to the power of $0$ is $1$. Now, we prove that if $(x^n)^m = x^{nm}$ for some $n$ and $m$, $(x^n)^{m \increment} = x^{n(m \increment)}$. We know that $(x^n)^{m \increment} = x^n \cdot (x^n)^m$. Using Definition 4.3.9, we get that
 	\[x^n \cdot (x^n)^m = (x^n)^{m \increment}.\]
 	We have finished proving that $(x^n)^m = x^{nm}$ for all $n$ and $m$.
-	
+
 	We will now prove that $(xy)^n = x^n y^n$, again using induction, except on $n$. When $n = 0$, it is obvious that both sides are equal to $1$. If $(xy)^n = x^n y^n$, we can multiply both sides of the equation by $xy$ to get that
 	\[(xy)^{n \increment} = x^{n \increment} y^{n \increment}.\]
 	We have completed showing that $(xy)^n = x^n y^n$.
-	
+
 	\subsection*{Exercise 4.3.5}
-	
+
 	We use induction on $N$, with base case $N = 1$. For the base case, $2^1 = 2 > 1$. For the inductive step, we multiply both sides of $2^N \ge N$ by $2$ to get $2^{N \increment} \ge 2N$. Since $2N = N + N \ge N + 1$, $2^{N \increment} \ge N \increment$. We have finished proving that $2^N \ge N$ for all positive integers $N$.
-	
+
 	\section{Gaps in the rational numbers}
-	
+
 	\subsection*{Exercise 4.4.1}
-	
+
 	If $x = \frac{a}{b}$ and $a, b \in \mathbf{N}$, by Proposition 2.3.9 (the Euclidean algorithm), there exist $m$ and $r$ in $\mathbf{N}$ such that $0 \le r < b$ and $a = mb + r$. Dividing both sides by $b$ yields that
 	\[x = m + \frac{r}{b}.\]
 	Because $0 \le r < b$, $0 \le \frac{r}{b} < 1$. Adding $m$ to $0$, $\frac{r}{b}$, and $1$ gives that $m \le m + \frac{r}{b} < m + 1$. But $m + \frac{r}{b} = x$, so we have proved that $m \le x < m + 1$. To prove that there exists some natural number $N$ greater than $x$, we set $N$ to be $m + 1$ when $m + 1 \ge 0$ and $0$ when $m + 1 < 0$. (This works because when $m + 1 \ge 0$, it is a natural number and greater than $x$, as we proved before. When $m + 1 < 0$, $N = 0$ works because $0 > m + 1 > x$.)
-	
+
 	\subsection*{Exercise 4.4.3}
-	
+
 	\paragraph*{Showing that every natural number is either even or odd, but not both} Let $n$ be a natural number. By the Euclidean algorithm (Proposition 2.3.9), every natural number is equal to $2m + r$, where $m, r \in \mathbf{N}$ and $0 \le r < 2$. This implies that every natural number is either even or odd. Now, we show that $n$ cannot be both even and odd, by showing that having both at the same time will cause a contradiction. A natural number $n$ being both even and odd must be equal to $2a$ and $2b + 1$ at the same time, where $a, b \in \mathbf{N}$. If $a > b$, $2a > 2b + 1$, and we have a contradiction, because then $2a \ne 2b + 1$. When $b \ge a$, $2b + 1 > 2a$, and we also have a contradiction.
-	
+
 	\paragraph*{Showing that an odd natural number $n$ has an odd square $n^2$}
-	
+
 	We know that $n = 2m + 1$ for some $m \in \mathbf{N}$. Therefore, $n^2 = 4m^2 + 2m + 1 = 2m(2m + 1) + 1$, and therefore, $n^2$ is also odd.
-	
+
 	\chapter{The real numbers}
-	
+
 	\section{Cauchy sequences}
-	
+
 	\subsection*{Exercise 5.1.1}
-	
+
 	Since $(a_n)_{n = 1}^\infty$ is a Cauchy sequence, it is eventually $1$-steady. Thus, for some $m$, $(a_n)_{n = m}^\infty$ is $1$-steady. By Lemma 5.1.14, the finite sequence $a_1, \dotsc, a_{m - 1}$ is bounded. Also, $(a_n)_{n = m}^\infty$ is bounded by $|a_m| + 1$. Therefore, $(a_n)_{n = 1}^\infty$ is bounded by the greater of the bounds for $a_1, \dotsc, a_{m - 1}$ and $(a_n)_{n = m}^\infty$.
-	
+
 	\section{Equivalent Cauchy sequences}
-	
+
 	\subsection*{Exercise 5.2.1}
-	
+
 	We will only prove that $(a_n)_{n = 1}^\infty$ being a Cauchy sequence implies that $(b_n)_{n = 1}^\infty$ is also a Cauchy sequence; we can replace $a_n$ with $b_n$ and $b_n$ with $a_n$, anyways.
-	
+
 	For any rational $\epsilon > 0$, there exist natural numbers $m_1$ and $m_2$ such that $(a_n)_{n = m_1}^\infty$ is $\frac{\epsilon}{3}$-steady and such that $(a_n)_{n = m_2}^\infty$ and $(b_n)_{n = m_2}^\infty$ are $\frac{\epsilon}{3}$-close. If $m$ is defined to be $m_1$ when $m_1 \ge m_2$ and $m_2$ when $m_1 < m_2$, $(b_n)_{n = m}^\infty$ is $\epsilon$-steady, because for any $x, y \in \mathbf{N}$ greater than or equal to $m$,
 	\[d(a_x, a_y), d(a_x, b_x), d(a_y, b_y) \le \frac{\epsilon}{3}.\]
-	
+
 	\section{The construction of the real numbers}
-	
+
 	\subsection*{Exercise 5.3.1}
-	
+
 	We will assume here that $\epsilon$ is a rational number greater than $0$.
-	
+
 	We know that $(a_n)_{n = 1}^\infty$ is always $\epsilon$-close to itself. Therefore, $x = x$.
-	
+
 	It is obvious that if $(a_n)_{n = 1}^\infty$ is eventually $\epsilon$-close to $(b_n)_{n = 1}^\infty$, $(b_n)_{n = 1}^\infty$ is eventually $\epsilon$-close to $(a_n)_{n = 1}^\infty$. Hence, $x = y$ implies $y = x$.
-	
+
 	We also know that when $(a_n)_{n = 1}^\infty$ is eventually $\epsilon/2$-close to $(b_n)_{n = 1}^\infty$ and $(b_n)_{n = 1}^\infty$ is eventually $\epsilon/2$-close to $(c_n)_{n = 1}^\infty$, $(a_n)_{n = 1}^\infty$ is eventually $\epsilon$-close to $(c_n)_{n = 1}^\infty$. (This is because the same thing holds if we replace sequences with rational numbers and ``eventually $\epsilon/2$-close'' with ``$\epsilon$-close''). Thus, $x = y$ and $y = z$ together imply $x = z$.
-	
+
 	\subsection*{Exercise 5.3.3}
-	
+
 	If $\formallim_{n \to \infty} a = \formallim_{n \to \infty} b$, we will prove that $a = b$. Assume for the sake of contradiction that $a \ne b$. Then, $|a - b| \ne 0$. But then $a, a, a, a, \dotsc$ and $b, b, b, b, \dotsc$ are not eventually $\frac{|a - b|}{2}$-close. But this contradicts our assumption that $\formallim_{n \to \infty} a = \formallim_{n \to \infty} b$, and thus $a = b$.
-	
+
 	To prove that $a = b$ implies $\formallim_{n \to \infty} a = \formallim_{n \to \infty} b$, we can use the fact that $a$ is $\epsilon$-close to itself for any rational $\epsilon > 0$.
-	
+
 	\subsection*{Exercise 5.3.5}
-	
+
 	For any rational $\epsilon > 0$, there is some $m$ greater than $\frac{1}{\epsilon}$, by Proposition 4.4.1. Since any natural number $m'$ greater than or equal to $m$ satisfies
 	\[\frac{1}{m'} \le \frac{1}{m} \le \epsilon,\]
 	the sequence $1/1, 1/2, 1/3, \dotsc$ is eventually $\epsilon$-close to the sequence $0, 0, 0, \dotsc$. Therefore, $\formallim_{n \to \infty} 1/n = 0$.
-	
+
 	\section{Ordering the reals}
-	
+
 	\subsection*{Exercise 5.4.2}
-	
+
 	\noindent (a) By Proposition 5.4.4, exactly one of the statements ``$x - y$ is positive'', ``$x - y$ is equal to $0$'', or ``$x - y$ is negative'' is true. These statements correspond to ``$x > y$'', ``$x = y$'', and ``$x < y$'' respectively.
-	
+
 	\bigskip
 	\noindent (b) By Proposition 5.4.4, $x - y$ is negative if and only if $y - x$ is positive. Hence, $x < y$ if and only if $y > x$.
-	
+
 	\bigskip
 	\noindent (c) Since $x < y$ and $y < z$, $y > x$ and $z > y$ (by part (b)). Thus, $y - x$ and $z - y$ are positive. We know that $z - y + y - x = z - x$. Therefore, by Proposition 5.4.4, $z - x$ is positive and $z > x$. Using part (b) again, we get that $x < z$.
-	
+
 	\bigskip
 	\noindent (d) By part (b), $y - x$ is positive. Since $y + z - (x + z)$ is equal to $y - x$, $x + z < y + z$.
-	
+
 	\subsection*{Exercise 5.4.4}
-	
+
 	By Proposition 5.4.12, there exist some integers $a$ and $b$ such that $a, b \ne 0$ and $0 < \frac{a}{b} \le x$. Since
 	\[0 < \frac{1}{2b|a| / a} \le \frac{|a|}{2b|a| / a} = \frac{a}{2b} < \frac{a}{b}\]
 	 and $2b|a| / a$ is a positive integer, we can define $N$ as $2b|a| / a$.
-	
+
 	\subsection*{Exercise 5.4.5}
-	
+
 	By Corollary 5.4.13 (the Archimedean property), there exists a positive integer $b$ such that $b(y - x) > 1$. Thus, $a \coloneqq
 	\begin{cases}
 		y - 1 & \text{if } y \in \mathbf{Z} \\
 		\lfloor y \rfloor & \text{if } y \not \in \mathbf{Z}
 	\end{cases}$
 	is greater than $bx$ and less than $by$. Therefore, $x < \frac{a}{b} < y$.
-	
+
 	\section{The least upper bound property}
-	
+
 	\subsection*{Exercise 5.5.1}
-	
+
 	First, we show that $-M$ is a lower bound for $-E$. We assume for the sake of contradiction that some element of $E$, which we call $-a$, is less than $-M$. Then, we have that $a > M$. But $a$ is in $E$, and therefore, $M \ne \sup(E)$. Thus, our assumption that $-a < -M$ is wrong, and $-M$ actually is a lower bound for $-E$.
-	
+
 	Next, we show that no other lower bound for $-E$, $-N$, is greater than $-M$. We assume for the sake of contradiction that $-N > -M$. Then, $N < M$ and $N$ is an upper bound for $E$ lower than $M$. But this is impossible from the definition of least upper bound. Hence, $-N$ is actually equal to or less than $-M$. This means that $-M = \inf(-E)$.
-	
+
 	\subsection*{Exercise 5.5.3}
-	
+
 	Assume for the sake of contradiction that $m \ne m'$. Therefore, either $m > m'$ or $m' > m$. If $m' > m$, we can just switch the names of $m$ and $m'$, so we can just assume $m > m'$. Hence, $m \ge m' + 1$. Thus, $\frac{m - 1}{n} \ge \frac{m'}{n}$. We know that $\frac{m'}{n}$ is an upper bound for $E$, so $\frac{m - 1}{n}$ is too. But we assumed that $\frac{m - 1}{n}$ is not an upper bound for $E$, so $m$ is actually equal to $m'$.
-	
+
 	\subsection*{Exercise 5.5.5}
-	
+
 	For any two real numbers $x < y$, there is a rational number $a$ such that $x < a < y$, by Proposition 5.4.14. Using Proposition 5.4.14 again, we can see that there also is a rational number $b$ such that $a < b < y$. Therefore, $x < a < b < y$. We can choose some rational number $c$ such that $a - \sqrt{2} < c < b - \sqrt{2}$. Thus, $a < c + \sqrt{2} < b$. If $c + \sqrt{2} \in \mathbf{Q}$, $c + \sqrt{2} - c = \sqrt{2}$ is also rational. Therefore, $c + \sqrt{2}$ is irrational. We have finished constructing an irrational number $c + \sqrt{2}$ such that $x < c + \sqrt{2} < y$.
-	
+
 	\section{Real exponentiation, part I}
-	
+
 	\subsection*{Exercise 5.6.2 (unfinished)}
-	
+
 	Assume that $q = a / b$ and $r = c / d$, where $a$, $b$, $c$, and $d$ are integers. Also, we assume that $b$ and $d$ are nonzero.
-	
+
 	\bigskip
 	\noindent (a) By Definition 5.6.7, $x^q = (x^{1 / b})^a$. We know that $x$ is positive, so $x^{1 / b}$ is also positive. Hence, $x^q = (x^{1 / b})^a$ is also positive.
-	
+
 	\bigskip
 	\noindent (b) Since $q = \frac{ad}{bd}$ and $r = \frac{bc}{bd}$,
 	\[x^{q + r} = x^{(ad + bc) / bd} = (x^{1 / bd})^{ad + bc}.\]
 	By Proposition 5.6.3, $(x^{1 / bd})^{ad + bc} = (x^{1 / bd})^{ad} (x^{1 / bd})^{bc}$. Thus, $x^{q + r} = x^q x^r$.
-	
+
 	Similarly, we can prove that $(x^q)^r = x^{qr}$. First, we manipulate $(x^q)^r$:
 	\[\begin{split}
 		(x^q)^r &= (x^{ad / bd})^{c / d} \\
@@ -705,88 +705,88 @@
 		&= x^{ac / bd}.
 	\end{split}\]
 	By replacing $ac / bd$ with $qr$ now, we obtain the result.
-	
+
 	\bigskip
 	\noindent (c) We know that
 	\[x^{-q} = (x^{1 / b})^{-a}.\]
 	Therefore, $x^{-q} = \frac{1}{(x^{1 / b})^a} = \frac{1}{x^q}$.
-	
+
 	\bigskip
 	\noindent (d) Since $q$ is positive, we can safely assume that $a$ and $b$ are also positive. (If they are not, they must be both negative, and we can use $-a$ and $-b$ instead of $a$ and $b$). If $x > y$, by Proposition 5.6.3 and Lemma 5.6.6(d), $(x^{1 / b})^a > (y^{1 / b})^a$. The left side is equal to $x^q$ and the right side is equal to $y^q$. Therefore, $x^q > y^q$.
-	
+
 	If $x^q > y^q$, $(x^{1 / b})^a > (y^{1 / b})^a$; thus, $((x^{1 / b})^a)^{1 / a} > ((y^{1 / b})^a)^{1 / a}$. Therefore, $x^{1 / b} > y^{1 / b}$. Similarly, we can obtain that $x > y$.
-	
+
 	\bigskip
 	\noindent (e) ?
-	
+
 	\subsection*{Exercise 5.6.3}
-	
+
 	If $x$ is positive, by Proposition 5.6.3 and Proposition 4.3.12(b), $y > 0$ implies $y^2 \le x^2$ if and only if $y \le x$. By Definition 5.6.4, the definition of $\sqrt{x}$, $\sqrt{x^2} = \sup \{y \in \mathbf{R}: y \ge 0 \text{ and } y \le x\}$. Therefore, $\sqrt{x^2} = x$ when $x$ is positive.
-	
+
 	If $x$ is $0$, it is obvious that $\sqrt{x^2} = \sup \{y \in \mathbf{R}: y = 0\} = 0$.
-	
+
 	If $x$ is negative, we can use the case for when $x$ is positive except for replacing $x$ with $-x$.
-	
+
 	\chapter{Limits of sequences}
-	
+
 	\section{Convergence and limit laws}
-	
+
 	\subsection*{Exercise 6.1.1}
-	
+
 	We induct on $m$, starting from $m = n + 1$. We have assumed that $a_{n + 1} > a_n$ already. Now, if $a_m > a_n$ and $m > n$, $a_{m + 1} > a_m > a_n$. We have proved $a_m > a_n$ for all $m > n$, as desired.
-	
+
 	\subsection*{Exercise 6.1.3}
-	
+
 	If $(a_n)_{n = m}^\infty$ converges to $c$, for any real number $\epsilon > 0$, there exists a natural number $k \ge m$ such that $(a_n)_{n = k}^\infty$ is $\epsilon$-close to $c$. We can define $k'$ to be $k$ if $k \ge m'$ and $m'$ if $k < m'$. We know that $k' \ge m'$ and that $(a_n)_{n = k'}^\infty$ is $\epsilon$-close to $c$ from this definition. Since we can do this for any $\epsilon > 0$, $(a_n)_{n = m'}^\infty$ converges to $c$.
-	
+
 	If $(a_n)_{n = m'}^\infty$ converges to $c$, for any real number $\epsilon > 0$, there exists a natural number $k \ge m'$ such that $(a_n)_{n = k}^\infty$ is $\epsilon$-close to $c$. Since $k \ge m' \ge m$, $(a_n)_{n = m}^\infty$ converges to $c$.
-	
+
 	\subsection*{Exercise 6.1.5}
-	
+
 	Assume $(a_n)_{n = m}^\infty$ converges to $c$, a real number. Then, for any real number $\epsilon > 0$, there exists a natural number $k \ge m$ such that $(a_n)_{n = k}^\infty$ is $\frac{\epsilon}{2}$-close to $c$. For any $A, B \ge k$, $a_A$ and $a_B$ must then both be $\frac{\epsilon}{2}$-close to $c$, and therefore $d(a_A, a_B) \le \epsilon$. Hence, $(a_n)_{n = m}^\infty$ is a Cauchy sequence.
-	
+
 	\subsection*{Exercise 6.1.7}
-	
+
 	A sequence $(a_n)_{n = m}^\infty$ that is bounded by a positive rational number $M$ in $\mathbf{Q}$ is obviously bounded in $\mathbf{R}$ by $M$.
-	
+
 	If $(a_n)_{n = m}^\infty$ is bounded by a positive real number $M$ in $\mathbf{R}$, Proposition 5.4.12 gives us a positive integer $N$ that is greater than $M$. We know $N \in \mathbf{Q}$, and therefore $N$ is a bound for $(a_n)_{n = m}^\infty$ using Definition 5.1.12.
-	
+
 	\subsection*{Exercise 6.1.9}
-	
+
 	If $a_n = 1$ and $b_n = \frac{1}{n}$ for all natural numbers $n \ge m$,
 	\[\lim_{n \to \infty} (b_n) = 0.\]
 	But then, $a_n / b_n = n$. Therefore, $(a_n / b_n)_{n = m}^\infty$ is not bounded. By Corollary 6.1.17, $(a_n / b_n)_{n = m}^\infty$ is not convergent, and hence, Theorem 6.1.19(f) does not necessarily work when $\lim_{n \to \infty} (b_n) = 0$.
-	
+
 	\section{The Extended real number system}
-	
+
 	\subsection*{Exercise 6.2.2}
-	
+
 	\noindent (a) If $E \subseteq \mathbf{R}$, we use Definition 5.5.10 to obtain this part of this theorem. If $+\infty \in E$, $\sup E = +\infty$ and therefore $x \le \sup E$ for any $x$. If $+\infty \notin E$ and $-\infty \in E$, $\sup E = \sup(E \backslash \{-\infty\})$. All finite elements of $E$ will then be less than or equal to $\sup E$, and $\sup E \ge -\infty$.
-	
+
 	Since $-x \le \sup(\{-y: y \in E\})$ for all $x \in E$, all elements of $E$ are greater than or equal to $-\sup(\{-y: y \in E\}) = \inf(E)$.
-	
+
 	\bigskip
 	\noindent (b) When $E \subseteq \mathbf{R}$, $E$ is non-empty and has an upper bound in $\mathbf{R}$, E is non-empty but has no upper bound in $\mathbf{R}$, or $E$ is empty. In the first case, $\sup E \in \mathbf{R}$, and $-\infty$ is not an upper bound for $E$, since $E$ is not empty.
 	Also, $+\infty$ would be greater than $\sup E$. In the second case, $-\infty$ is not an upper bound for $E$ and $+\infty = \sup E$. In the last case, $-\infty = \sup E$ and $+\infty > \sup E$. Therefore, $\sup E \le M$ for any $M$ that is an upper bound for $E$, since it is true both when we restrict $M$ to be $+\infty$ or $-\infty$ and when $M$ is forced to be real (Definition 5.5.10).
-	
+
 	If $+\infty \in E$, only $+\infty$ is an upper bound for $E$, so $\sup E = +\infty = M$.
-	
+
 	If $-\infty \in E$ but $+\infty \notin E$, $-\infty$ is not both an upper bound for $E$ and less than $\sup E$, from the case for when $E \subseteq \mathbf{R}$ applied to $E \backslash \{-\infty\}$.
-	
+
 	(c) We know that $\inf(E) = -\sup(\{-x: x \in E\})$. Since $-M$ is an upper bound for $\{-x: x \in E\}$, $\sup(\{-x: x \in E\}) \le -M$ from part (b). Therefore, $\inf(E) \ge M$.
-	
+
 	\section{Suprema and Infima of sequences}
-	
+
 	\subsection*{Exercise 6.3.2}
-	
+
 	Let $S$ be the set $\{a_n: n \ge m\}$. Then, $x = \sup(S)$ and $a_n \in S$ for any natural number $n \ge m$. Therefore, Theorem 6.2.11(a) tells us that $a_n \le x$ for all $n \ge m$. When $M \in \mathbf{R}^*$ is an upper bound for $(a_n)_{n = m}^\infty$, $M$ is also an upper bound for $S$. Hence, Theorem 6.2.11(b) implies that $x \le M$. For every extended real number $y$ for which $y < x$, there exists at least one $n \ge m$ such that $y < a_n \le x$ because otherwise $y$ would be an upper bound for $S$ lower than $x$, which is impossible.
-	
+
 	\subsection*{Exercise 6.3.4}
-	
+
 	The sequence $(x^n)_{n = 1}^\infty$ does not converge if $x > 1$. Therefore, we cannot use our trick with $xL = L$. In fact, by Theorem 6.1.19(b), Proposition 6.3.10, and $(\frac{1}{x})^n x^n = 1$, the sequence $(x^n)_{n = 1}^\infty$ converging would imply
 	\[1 = \lim_{n \to \infty} 1 = \lim_{n \to \infty} \left(\frac{1}{x} \right)^n \lim_{n \to \infty} (x^n) = 0 \cdot \lim_{n \to \infty} (x^n) = 0.\]
 	We know that $1 \ne 0$, so $(x^n)_{n = 1}^\infty$ diverges when $x > 1$.
-	
+
 	In Example 1.2.3, we assumed implicitly that $L = \lim_{n \to \infty} x^n$ existed. Hence, when we made the absurd conclusion that $x = 1$ or $L = 0$, we were actually concluding that $x = 1$ or $L = 0$ when $L$ is well-defined.
-	
+
 \end{document}
