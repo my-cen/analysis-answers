@@ -791,4 +791,10 @@
 
 	\section{Limsup, Liminf, and limit points}
 
+	\subsection*{Exercise 6.4.1}
+	
+	For every real number $\epsilon > 0$, there exists $k \in \mathbf{N}$ such that $(a_n)_{n = k}^\infty$ is $\epsilon$-close to $c$. For every natural number $M \ge m$, defining $K$ to be $k$ if $k \ge M$ and $M$ if $M > k$ therefore yields that $a_K$ is $\epsilon$-close to $c$. Hence, $c$ is $\epsilon$-adherent to $(a_n)_{n = M}^\infty$. Doing this for all $M > m$ tells us that $c$ is a limit point of $(a_n)_{n = m}^\infty$.
+	
+	To show that $c$ is the only limit point of $(a_n)_{n = m}^\infty$, we assume for the sake of contradiction the opposite: that there exists a limit point $d \ne c$. Assume that $(a_n)_{n = k}^\infty$ is $\frac{d - c}{3}$-close to $c$, where $k \in \mathbf{N}$ and $k \ge m$. (This is always possible because $(a_n)_{n = m}^\infty$ is convergent to $c$). Then, there exists a natural number $K \ge k$ such that $a_K$ is $\frac{d - c}{3}$-close to $d$, because $d$ is a limit point. But then $a_K$ is both $\frac{d - c}{3}$-close to $d$ and $\frac{d - c}{3}$-close to $c$. This is impossible, so $d$ cannot exist.
+	
 \end{document}
