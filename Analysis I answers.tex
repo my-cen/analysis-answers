@@ -68,11 +68,11 @@
 
 	Conversely, if $a \increment \le b$, we need to prove that $a < b$. Since $a \increment = a + 1 \ge a$, by (b), $a \le b$. If $a = b$, then $a \increment \le a$, and we get, from (c), that $a \increment = a$. This is a contradiction, from Axiom 2.3 if $a = 0$ and Axiom 2.4 otherwise. Therefore, $a < b$.
 
-	\subsection*{Exercise 2.2.6 (unfinished)}
+	\subsection*{Exercise 2.2.6}
 
-	We use induction on $n$. When $n = 0$, $m \le n$ implies that $0 = m + a$. But by Corollary 2.2.9, $m = 0 = n$, so $P(n)$ being true implies that $P(m)$ is true.
+	We use induction on $n$. When $n = 0$, $m \le n$ implies that $0 = m + a$ for some natural number $a$. But by Corollary 2.2.9, $m = 0 = n$, so $P(n)$ being true implies that $P(m)$ is true.
 
-	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $b \le n \increment$, $n \increment = b + c$ for some $c$. If $c$ is positive, by Lemma 2.2.10, $n \increment = b + d \increment$ for some $d$, so by Lemma 2.2.3 and Axiom 2.4, $n = b + d$, and $b \le n$. Therefore, $b \le n \increment$ implies that $b \le n$ or $n \increment = b + 0 = b$. Because of Lemmas 2.2.2 and 2.2.3, $n \increment = (n + 0) \increment = n + 0 \increment = n + 1$. Since $P(n \increment)$ implies $P(n)$, $P(n)$ is true. But then \textbf{?}
+	If $a \le n$ and $P(n)$ together imply $P(a)$, we now need to prove that $b \le n \increment$ and $P(n \increment)$ together imply $P(b)$. Since $P(n \increment)$ implies $P(n)$, $P(b)$ for all $b \le n$. Proposition 2.2.12(f) and $a = a + 0$ imply that for all $b \le n \increment$, $b \le n$ or $b = n \increment$. Hence, $b \le n \increment$ implies $P(b)$ is true.
 
 	\section{Multiplication}
 
